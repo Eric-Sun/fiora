@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fiona:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="server.war">
+      <element id="artifact" artifact-name="fiona:war exploded" />
+    </root>
+  </artifact>
+</component>
