@@ -22,12 +22,12 @@ public class JaxManager {
     JaxServerUtil jaxServerUtil;
 
 
-    public int addDZ(int uid, String deviceId, String content, String md5, int fetchSource, long sourceId) throws FioraException {
+    public int addDZ(int uid, String deviceId, String content, String md5, int fetchSource, long sourceDZId) throws FioraException {
         Map<String, String> innerParams = Maps.newHashMap();
         innerParams.put("content", content);
         innerParams.put("md5", md5);
         innerParams.put("fetchSource", fetchSource + "");
-        innerParams.put("sourceId", sourceId + "");
+        innerParams.put("sourceDZId", sourceDZId + "");
 
 
         Map<String, String> params = Maps.newHashMap();
@@ -44,4 +44,25 @@ public class JaxManager {
         return dzAddResponse.getData();
     }
 
+    public int addMachineUser(int uid, String deviceId, String userName,String thumbUrl) throws FioraException {
+        Map<String, String> innerParams = Maps.newHashMap();
+        innerParams.put("userName", userName);
+        innerParams.put("thumbUrl", thumbUrl);
+
+
+
+        Map<String, String> params = Maps.newHashMap();
+        params.put("args", JSON.toJSONString(innerParams));
+        params.put("uid", uid + "");
+        params.put("deviceId", deviceId);
+        params.put("act", "dz.add");
+        String url = jaxServerUtil.getBaseUrl();
+        String paramString = JSON.toJSONString(params);
+
+        LOG.info("Url = " + url + " params = " + paramString);
+        String rawResponse = InternetUtil.post(url, params);
+        DzAddResponse dzAddResponse = JSON.parseObject(rawResponse, DzAddResponse.class);
+        return dzAddResponse.getData();
+
+    }
 }

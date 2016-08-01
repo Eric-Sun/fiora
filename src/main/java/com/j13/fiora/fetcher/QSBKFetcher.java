@@ -4,6 +4,7 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.j13.fiora.core.FioraConstants;
 import com.j13.fiora.core.FioraException;
+import com.j13.fiora.util.InternetUtil;
 import com.j13.fiora.util.MD5Encrypt;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -24,122 +25,112 @@ import java.util.List;
 public class QSBKFetcher implements Fetcher {
 
     private static Logger LOG = LoggerFactory.getLogger(QSBKFetcher.class);
+    @Autowired
+    private JaxManager jaxManager;
 
+
+    private List<DZ> dzList = Lists.newLinkedList();
+    private List<FetchedUser> userLIst = Lists.newLinkedList();
 
     @Override
     public void fetch() throws FioraException {
-        CloseableHttpClient httpclient = HttpClients.createDefault();
-        CloseableHttpResponse response = null;
-        try {
-            HttpGet httpGet = new HttpGet("http://www.qiushibaike.com");
-            httpGet.addHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.86 Safari/537.36");
-            response = httpclient.execute(httpGet);
-            System.out.println(response.getStatusLine());
-            HttpEntity entity1 = response.getEntity();
-            String rawResponse = EntityUtils.toString(entity1);
+        loadInfo("http://www.qiushibaike.com/text/");
+        loadOldInfo(2);
+        LOG.info("[QSBK] all size = {}", dzList.size());
+        save(dzList);
 
-            List<Record> recordList = parseRawResponse(rawResponse);
+    }
 
-            saveToDB(recordList);
-        } catch (IOException e) {
-            throw new FioraException("QSBK fetch. fetch action error.", e);
-        } finally {
-            if (response != null) {
-                try {
-                    response.close();
-                } catch (IOException e) {
-                    throw new FioraException("QSBK fetch. response close action error.", e);
-                }
-
-            }
+    public void loadOldInfo(int size) throws FioraException {
+        for (int i = 2; i <= size; i++) {
+            loadInfo("http://www.qiushibaike.com/text/page/" + i + "/?s=4897932");
             try {
-                httpclient.close();
-            } catch (IOException e) {
-                throw new FioraException("QSBK fetch. httpclient close action error.", e);
+                Thread.sleep(2000L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
+
     }
 
-    private void saveToDB(List<Record> recordList) {
-        for (Record r : recordList) {
-            if (r.getContent().indexOf("糗") > 0) {
-                LOG.info("QSBK Record have 糗. drop it.");
-                continue;
+    private void save(List<DZ> dzList) throws FioraException {
+
+        for (DZ dz : dzList) {
+            int dzId = jaxManager.addDZ(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID,
+                    dz.getContent(), dz.getMd5(), dz.getSourceId(), dz.getSourceDzId());
+
+            LOG.info("add dz(QSBK). MD5={}, dzId={}", dz.getMd5(), dzId);
+        }
+
+
+//        for (FetchedUser user : userLIst) {
+//            int dzId = jaxManager.addMachineUser(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID,
+//                    user.getUserName(), user.getThumbUrl());
+//            LOG.info("add user. userName={}, userId={}", user.getUserName(), dzId);
+//        }
+
+
+    }
+
+    private void loadInfo(String url) throws FioraException {
+        String rawResponse = InternetUtil.get(url);
+        Iterator<String> iter = Splitter.on("class=\"article block untagged mb15\" id='qiushi_tag_").split(rawResponse).iterator();
+        iter.next();
+        while (iter.hasNext()) {
+            String str = iter.next();
+            int index = str.indexOf("'");
+
+            // 找到dzId
+            String dzId = str.substring(0, index);
+            str = str.substring(index);
+
+            // 找到thumb
+            int index2 = str.indexOf("<img src=\"");
+            str = str.substring(index2 + "<img src=\"".length());
+            int index3 = str.indexOf("\"");
+            String thumbUrl = str.substring(0, index3);
+            str = str.substring(index3);
+
+            // username
+            int index4 = str.indexOf("alt=\"");
+            str = str.substring(index4 + "alt=\"".length());
+            int index5 = str.indexOf("\"");
+            String userName = str.substring(0, index5);
+            if (userName.equals("匿名用户")) {
+                userName = null;
             }
-            r.setMd5(MD5Encrypt.encode(r.getContent()));
-//            if (!DZDAO.checkExist(r.getMd5())) {
-//                long imgId = -1;
-//                if (r.getImgUrl() != null) {
-//                    imgId = imgDAO.insert(r.getImgUrl());
-//                }
-//                long dzId = DZDAO.insert(FioraConstants.SYSTEM_FETCHER_USER_ID, r.getContent(),
-//                        imgId, r.getMd5(), FioraConstants.FetchSource.QSBK);
-//                LOG.info("QSBK Record saved. dzId=" + dzId);
-//            } else {
-//                LOG.info("QSBK Record exists in db");
-//            }
-
-        }
+            str = str.substring(index5);
 
 
-    }
+            //content
+            int index6 = str.indexOf("<div class=\"content\">");
+            str = str.substring(index6 + "<div class=\"content\">".length());
+            int index7 = str.indexOf("</div>");
+            String content = str.substring(0, index7).trim();
 
-
-    private List<Record> parseRawResponse(String rawResponse) {
-        List<Record> recordList = Lists.newArrayList();
-        Iterator<String> strArr = Splitter.on("<div class=\"content\">").split(rawResponse).iterator();
-        strArr.next();
-        while (strArr.hasNext()) {
-            Record r = new Record();
-            // </div>之前的是内容
-            String t = strArr.next();
-            Iterator<String> i = Splitter.on("</div>").split(t).iterator();
-            String s1 = i.next().trim().replace("<br/>", "");
-            String s2 = i.next().trim();
-            r.setContent(s1);
-            // 如果有thumb
-            Iterator<String> i2 = Splitter.on("<img src=\"").split(s2).iterator();
-            i2.next();
-            if (i2.hasNext()) {
-                LOG.info("QSBK Record have img. drop it.");
-                continue;
-//                String s3 = i2.next().trim();
-//                String s4 = Splitter.on("\"").split(s3).iterator().next().trim();
-//                r.setImgUrl(s4);
+            if (LOG.isDebugEnabled()) {
+                LOG.debug("[QSBK] dzId={},userName={},thumb={},content={}", dzId, userName, thumbUrl, content);
             }
-            recordList.add(r);
+
+            DZ dz = new DZ();
+            dz.setContent(content);
+            dz.setMd5(MD5Encrypt.encode(content));
+            dz.setSourceId(FioraConstants.FetchSource.QSBK);
+            dz.setSourceDzId(new Long(dzId));
+            dzList.add(dz);
+
+            if (userName != null
+                    || thumbUrl.equals("http://pic.qiushibaike.com/system/avtnew/2054/20541577/medium/nopic.jpg")
+                    || thumbUrl.indexOf("anony.png") > 0) {
+                FetchedUser fetchedUser = new FetchedUser();
+                fetchedUser.setThumbUrl(thumbUrl);
+                fetchedUser.setUserName(userName);
+                userLIst.add(fetchedUser);
+            }
+
         }
-        return recordList;
+
     }
 
 
-    private class Record {
-        private String content;
-        private String imgUrl;
-        private String md5;
-
-        public String getMd5() {
-            return md5;
-        }
-
-        public void setMd5(String md5) {
-            this.md5 = md5;
-        }
-
-        public String getContent() {
-            return content;
-        }
-
-        public void setContent(String content) {
-            this.content = content;
-        }
-
-        public String getImgUrl() {
-            return imgUrl;
-        }
-
-        public void setImgUrl(String imgUrl) {
-            this.imgUrl = imgUrl;
-        }
-    }
 }

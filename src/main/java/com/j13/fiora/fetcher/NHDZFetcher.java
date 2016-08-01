@@ -42,7 +42,8 @@ public class NHDZFetcher implements Fetcher {
             DZ dz = new DZ();
             dz.setContent(dzContent.trim().replaceAll("<p>", "").replaceAll("</p>", ""));
             dz.setMd5(MD5Encrypt.encode(dzContent));
-            dz.setSourceId(new Long(id));
+            dz.setSourceId(FioraConstants.FetchSource.NHDZ);
+            dz.setSourceDzId(new Long(id));
             dzList.add(dz);
 
         }
@@ -78,57 +79,5 @@ public class NHDZFetcher implements Fetcher {
     }
 
 
-    private class DZ {
-        private String content;
-        private String md5;
-        private long sourceId;
-
-        public long getSourceId() {
-            return sourceId;
-        }
-
-        public void setSourceId(long sourceId) {
-            this.sourceId = sourceId;
-        }
-
-        private List<Comment> commentList = new LinkedList<Comment>();
-
-        public List<Comment> getCommentList() {
-            return commentList;
-        }
-
-        public void setCommentList(List<Comment> commentList) {
-            this.commentList = commentList;
-        }
-
-        public String getMd5() {
-            return md5;
-        }
-
-        public void setMd5(String md5) {
-            this.md5 = md5;
-        }
-
-        public String getContent() {
-            return content;
-        }
-
-        public void setContent(String content) {
-            this.content = content;
-        }
-
-    }
-
-    private class Comment {
-        private String content;
-
-        public String getContent() {
-            return content;
-        }
-
-        public void setContent(String content) {
-            this.content = content;
-        }
-    }
 }
 
