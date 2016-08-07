@@ -35,7 +35,7 @@ public class JaxManager {
         params.put("args", JSON.toJSONString(innerParams));
         params.put("uid", uid + "");
         params.put("deviceId", deviceId);
-        params.put("act", "dz.add");
+        params.put("act", "dz.addFetchedDZ");
         String url = jaxServerUtil.getBaseUrl();
         String paramString = JSON.toJSONString(params);
 

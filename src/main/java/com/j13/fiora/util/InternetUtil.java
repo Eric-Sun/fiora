@@ -144,8 +144,8 @@ public class InternetUtil {
     public static String getAndSaveFile(String url, String dir) throws FioraException {
         Random ran = new Random();
         int i = ran.nextInt(1000);
-        String file = dir + File.separator +
-                System.currentTimeMillis() + i + ".jpg";
+        String fileName = System.currentTimeMillis() + i + ".jpg";
+        String file = dir + File.separator + fileName;
         CloseableHttpClient httpclient = HttpClients.createDefault();
         CloseableHttpResponse response = null;
         try {
@@ -164,7 +164,7 @@ public class InternetUtil {
             }
             in.close();
 
-            return file;
+            return fileName;
         } catch (IOException e) {
             throw new FioraException("http error. Url=" + url, e);
         } finally {
@@ -185,5 +185,10 @@ public class InternetUtil {
         }
     }
 
+
+    public static void cleanTmpFile(String dir, String fileName) {
+        String file = dir + File.separator + fileName;
+        new File(file).delete();
+    }
 
 }

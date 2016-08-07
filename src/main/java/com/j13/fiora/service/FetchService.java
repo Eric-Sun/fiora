@@ -59,6 +59,9 @@ public class FetchService {
             int data = jaxManager.addMachineUser(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID
                     , userName, fileName);
             LOG.info("[MEIPAI] name={},url={},file={},response={},id={}", userName, url, fileName, data, id);
+
+            InternetUtil.cleanTmpFile(dir, fileName);
+            LOG.info("delete tmp file. filename={}", fileName);
             count++;
         }
         return count;
