@@ -18,23 +18,13 @@ public class FioraListener implements ServletContextListener {
 
         PropertiesConfiguration.getInstance().addResource("/fiora.properties");
 
-        WebApplicationContentHolder.setServletContext(sce.getServletContext());
-        NHDZFetcher fetcher1 = WebApplicationContentHolder.getApplicationContext().getBean(NHDZFetcher.class);
-        QSBKFetcher fetcher2 = WebApplicationContentHolder.getApplicationContext().getBean(QSBKFetcher.class);
-        Random random = new Random();
-        while (true) {
-            try {
-                fetcher1.fetch();
-                fetcher2.fetch();
-            } catch (Exception e) {
-                LOG.info("", e);
-            }
-            try {
-                int i = random.nextInt(5) + 5;
-                Thread.sleep(i * 60 * 1000L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        if (PropertiesConfiguration.getInstance().getStringValue("fetch.switch").equals("on")) {
+            FetchTask fetchTask = new FetchTask(sce);
+            new Thread(fetchTask).start();
+            LOG.info("Fetch task started.");
+        }else{
+            LOG.info("Fetch task switch off");
+
         }
 
 

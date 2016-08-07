@@ -37,7 +37,7 @@ done
 #if [ -d "$SERVER_HOME/server-webapps" ]; then
 #    CLASSPATH=${CLASSPATH}:$SERVER_HOME
 #fi
-CLASSPATH=$CLASSPATH:$SERVER_HOME/config/deploy:$JAVA_HOME/lib/tools.jar
+CLASSPATH=$CLASSPATH:$JAVA_HOME/lib/tools.jar
 SERVER_LOGS_OUT_FILE=$SERVER_LOGS/server.out
 
 case $action in

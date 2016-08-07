@@ -21,7 +21,7 @@ public class ServerStarter {
         // init server
         JettyServerConfig jettyServerConfig = new JettyServerConfig();
         jettyServerConfig.setPort(port);
-        jettyServerConfig.setServerName("/fiora");
+        jettyServerConfig.setServerName("");
         jettyServerConfig.setTmpBaseDir(tmpDir);
         instance = new JettyServer(jettyServerConfig);
         instance.init();

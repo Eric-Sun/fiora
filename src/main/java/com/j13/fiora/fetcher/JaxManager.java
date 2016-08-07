@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -44,23 +45,23 @@ public class JaxManager {
         return dzAddResponse.getData();
     }
 
-    public int addMachineUser(int uid, String deviceId, String userName,String thumbUrl) throws FioraException {
+    public int addMachineUser(int uid, String deviceId, String userName, String fileName) throws FioraException {
         Map<String, String> innerParams = Maps.newHashMap();
-        innerParams.put("userName", userName);
-        innerParams.put("thumbUrl", thumbUrl);
-
+        innerParams.put("nickName", userName);
+        innerParams.put("mobile", "-1");
+        innerParams.put("password", "-1");
+        innerParams.put("isMachine", "1");
 
 
         Map<String, String> params = Maps.newHashMap();
         params.put("args", JSON.toJSONString(innerParams));
         params.put("uid", uid + "");
         params.put("deviceId", deviceId);
-        params.put("act", "dz.add");
+        params.put("act", "user.register");
         String url = jaxServerUtil.getBaseUrl();
         String paramString = JSON.toJSONString(params);
 
-        LOG.info("Url = " + url + " params = " + paramString);
-        String rawResponse = InternetUtil.post(url, params);
+        String rawResponse = InternetUtil.postFile(url, params, fileName);
         DzAddResponse dzAddResponse = JSON.parseObject(rawResponse, DzAddResponse.class);
         return dzAddResponse.getData();
 

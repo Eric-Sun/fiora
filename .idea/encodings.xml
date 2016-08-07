@@ -5,6 +5,11 @@
     <file url="file://$PROJECT_DIR$/config/deploy/dataSource.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/dev/dataSource.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/assembly" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/controller/APIController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/controller/HDDispatcher.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/HDConstants.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/RequestData.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/ResponseData.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/WebApplicationContentHolder.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/config/PropertiesConfiguration.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/exception/CommonRequestException.java" charset="UTF-8" />
