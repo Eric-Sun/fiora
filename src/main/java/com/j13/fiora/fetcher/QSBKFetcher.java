@@ -108,9 +108,9 @@ public class QSBKFetcher implements Fetcher {
             int index7 = str.indexOf("</div>");
             String content = str.substring(0, index7).trim();
 
-            if (LOG.isDebugEnabled()) {
-                LOG.debug("[QSBK] dzId={},userName={},thumb={},content={}", dzId, userName, thumbUrl, content);
-            }
+//            if (LOG.isDebugEnabled()) {
+//                LOG.debug("[QSBK] dzId={},userName={},thumb={},content={}", dzId, userName, thumbUrl, content);
+//            }
 
             DZ dz = new DZ();
             dz.setContent(content);

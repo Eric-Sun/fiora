@@ -34,6 +34,7 @@ public class NHDZFetcher implements Fetcher {
         while (idIter.hasNext()) {
             String id = idIter.next();
             String rawResponse = InternetUtil.get("http://neihanshequ.com/p" + id);
+//            LOG.info("response length size={}", rawResponse.length());
             Iterator<String> tmpIter = Splitter.on("<h1 class=\"title\">").split(rawResponse).iterator();
             tmpIter.next();
             String tmp = tmpIter.next();
@@ -74,7 +75,7 @@ public class NHDZFetcher implements Fetcher {
                         dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceId());
                 LOG.info("try again finished.");
             }
-            LOG.info("add dz(HNDZ). MD5=" + dz.getMd5() + " dzId=" + dzId);
+            LOG.info("add dz(NHDZ). MD5=" + dz.getMd5() + " dzId=" + dzId);
         }
     }
 

@@ -39,7 +39,7 @@ public class JaxManager {
         String url = jaxServerUtil.getBaseUrl();
         String paramString = JSON.toJSONString(params);
 
-        LOG.info("Url = " + url + " params = " + paramString);
+//        LOG.info("Url = " + url + " params = " + paramString);
         String rawResponse = InternetUtil.post(url, params);
         DzAddResponse dzAddResponse = JSON.parseObject(rawResponse, DzAddResponse.class);
         return dzAddResponse.getData();
