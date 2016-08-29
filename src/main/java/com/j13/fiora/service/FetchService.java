@@ -67,4 +67,14 @@ public class FetchService {
         return count;
     }
 
+
+//    public int commentFetch(RequestData rd) {
+//        int start = rd.getInteger("start");
+//        int end = rd.getInteger("end");
+//
+//
+//
+//
+//
+//    }
 }

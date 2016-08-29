@@ -21,17 +21,18 @@ public class FetchTask implements Runnable {
     public void run() {
         WebApplicationContentHolder.setServletContext(sce.getServletContext());
         NHDZFetcher fetcher1 = WebApplicationContentHolder.getApplicationContext().getBean(NHDZFetcher.class);
-        QSBKFetcher fetcher2 = WebApplicationContentHolder.getApplicationContext().getBean(QSBKFetcher.class);
+        // close qsbk    2016/8/29
+//        QSBKFetcher fetcher2 = WebApplicationContentHolder.getApplicationContext().getBean(QSBKFetcher.class);
         Random random = new Random();
         while (true) {
             try {
                 fetcher1.fetch();
-                fetcher2.fetch();
+//                fetcher2.fetch();
             } catch (Exception e) {
                 LOG.info("", e);
             }
             try {
-                int i = random.nextInt(5) + 5;
+                int i = random.nextInt(5);
                 Thread.sleep(i * 60 * 1000L);
             } catch (InterruptedException e) {
                 e.printStackTrace();

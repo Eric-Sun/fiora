@@ -1,6 +1,10 @@
 package com.j13.fiora.fetcher;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.google.common.base.Splitter;
+import com.google.common.collect.Lists;
 import com.j13.fiora.core.FioraConstants;
 import com.j13.fiora.core.FioraException;
 import com.j13.fiora.util.InternetUtil;
@@ -13,11 +17,13 @@ import org.springframework.stereotype.Service;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class NHDZFetcher implements Fetcher {
 
     private static Logger LOG = LoggerFactory.getLogger(NHDZFetcher.class);
+    private Random random = new Random();
 
     @Autowired
     JaxManager jaxManager;
@@ -30,10 +36,13 @@ public class NHDZFetcher implements Fetcher {
     }
 
     private List<DZ> parsePerDZ(Iterator<String> idIter) throws FioraException {
+
         List<DZ> dzList = new LinkedList<DZ>();
         while (idIter.hasNext()) {
             String id = idIter.next();
             String rawResponse = InternetUtil.get("http://neihanshequ.com/p" + id);
+            if (rawResponse.indexOf("您访问的页面不存在") > 0)
+                continue;
 //            LOG.info("response length size={}", rawResponse.length());
             Iterator<String> tmpIter = Splitter.on("<h1 class=\"title\">").split(rawResponse).iterator();
             tmpIter.next();
@@ -46,6 +55,32 @@ public class NHDZFetcher implements Fetcher {
             dz.setSourceId(FioraConstants.FetchSource.NHDZ);
             dz.setSourceDzId(new Long(id));
             dzList.add(dz);
+
+
+            // comment
+            List<String> recentCommentList = Lists.newLinkedList();
+            List<String> topCommentList = Lists.newLinkedList();
+            String commentResponse = InternetUtil.get("http://neihanshequ.com/m/api/get_essay_comments/?group_id=" + id
+                    + "&app_name=neihanshequ_web&offset=0");
+
+            JSONObject o1 = JSON.parseObject(commentResponse);
+            JSONObject o2 = o1.getJSONObject("data");
+            JSONArray recentCommentsArray = o2.getJSONArray("recent_comments");
+            for (Object o : recentCommentsArray.toArray()) {
+                JSONObject o3 = (JSONObject) o;
+                String content = o3.getString("text");
+                recentCommentList.add(content);
+            }
+
+            JSONArray topCommentsArray = o2.getJSONArray("top_comments");
+            for (Object o : topCommentsArray.toArray()) {
+                JSONObject o3 = (JSONObject) o;
+                String content = o3.getString("text");
+                topCommentList.add(content);
+            }
+
+            dz.setRecentCommentList(recentCommentList);
+            dz.setTopcommentList(topCommentList);
 
         }
         return dzList;
@@ -75,10 +110,29 @@ public class NHDZFetcher implements Fetcher {
                         dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceId());
                 LOG.info("try again finished.");
             }
-            LOG.info("add dz(NHDZ). MD5=" + dz.getMd5() + " dzId=" + dzId);
+
+            for (String content : dz.getRecentCommentList()) {
+                jaxManager.addRecentComment(content, dzId, randomHot());
+            }
+
+            for (String content : dz.getTopcommentList()) {
+                jaxManager.addTopComment(content, dzId, randomTopHot());
+            }
+
+            LOG.info("add dz(NHDZ). MD5={},dzId={},recentCommentSize={},topCommentSize={}", dz.getMd5(), dzId,
+                    dz.getRecentCommentList().size(), dz.getTopcommentList().size());
         }
     }
 
 
+    private int randomHot() {
+        return random.nextInt(10);
+    }
+
+    private int randomTopHot() {
+        return random.nextInt(100) + 100;
+    }
 }
+
+
 

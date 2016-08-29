@@ -8,6 +8,24 @@ public class DZ {
     private String md5;
     private int sourceId;
     private long sourceDzId;
+    private List<String> recentCommentList = new LinkedList<String>();
+    private List<String> topcommentList = new LinkedList<String>();
+
+    public List<String> getRecentCommentList() {
+        return recentCommentList;
+    }
+
+    public void setRecentCommentList(List<String> recentCommentList) {
+        this.recentCommentList = recentCommentList;
+    }
+
+    public List<String> getTopcommentList() {
+        return topcommentList;
+    }
+
+    public void setTopcommentList(List<String> topcommentList) {
+        this.topcommentList = topcommentList;
+    }
 
     public long getSourceDzId() {
         return sourceDzId;
@@ -23,16 +41,6 @@ public class DZ {
 
     public void setSourceId(int sourceId) {
         this.sourceId = sourceId;
-    }
-
-    private List<Comment> commentList = new LinkedList<Comment>();
-
-    public List<Comment> getCommentList() {
-        return commentList;
-    }
-
-    public void setCommentList(List<Comment> commentList) {
-        this.commentList = commentList;
     }
 
     public String getMd5() {
