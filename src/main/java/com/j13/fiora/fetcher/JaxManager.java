@@ -45,11 +45,12 @@ public class JaxManager {
         return dzAddResponse.getData();
     }
 
-    public int addRecentComment(String content, int dzId, int hot) throws FioraException {
+    public int addRecentComment(String content, int dzId, int hot, String commentId) throws FioraException {
         Map<String, String> innerParams = Maps.newHashMap();
         innerParams.put("content", content);
         innerParams.put("dzId", dzId + "");
         innerParams.put("hot", hot + "");
+        innerParams.put("sourceCommentId", commentId);
 
         Map<String, String> params = Maps.newHashMap();
         params.put("args", JSON.toJSONString(innerParams));
@@ -64,11 +65,12 @@ public class JaxManager {
     }
 
 
-    public int addTopComment(String content, int dzId, int hot) throws FioraException {
+    public int addTopComment(String content, int dzId, int hot, String commentId) throws FioraException {
         Map<String, String> innerParams = Maps.newHashMap();
         innerParams.put("content", content);
         innerParams.put("dzId", dzId + "");
         innerParams.put("hot", hot + "");
+        innerParams.put("sourceCommentId", commentId);
 
         Map<String, String> params = Maps.newHashMap();
         params.put("args", JSON.toJSONString(innerParams));

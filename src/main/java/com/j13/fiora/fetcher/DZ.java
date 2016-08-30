@@ -8,22 +8,22 @@ public class DZ {
     private String md5;
     private int sourceId;
     private long sourceDzId;
-    private List<String> recentCommentList = new LinkedList<String>();
-    private List<String> topcommentList = new LinkedList<String>();
+    private List<Comment> recentCommentList = new LinkedList<Comment>();
+    private List<Comment> topcommentList = new LinkedList<Comment>();
 
-    public List<String> getRecentCommentList() {
+    public List<Comment> getRecentCommentList() {
         return recentCommentList;
     }
 
-    public void setRecentCommentList(List<String> recentCommentList) {
+    public void setRecentCommentList(List<Comment> recentCommentList) {
         this.recentCommentList = recentCommentList;
     }
 
-    public List<String> getTopcommentList() {
+    public List<Comment> getTopcommentList() {
         return topcommentList;
     }
 
-    public void setTopcommentList(List<String> topcommentList) {
+    public void setTopcommentList(List<Comment> topcommentList) {
         this.topcommentList = topcommentList;
     }
 

@@ -32,7 +32,7 @@ public class FetchTask implements Runnable {
                 LOG.info("", e);
             }
             try {
-                int i = random.nextInt(5);
+                int i = random.nextInt(5) + 5;
                 Thread.sleep(i * 60 * 1000L);
             } catch (InterruptedException e) {
                 e.printStackTrace();

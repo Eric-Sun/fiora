@@ -58,8 +58,8 @@ public class NHDZFetcher implements Fetcher {
 
 
             // comment
-            List<String> recentCommentList = Lists.newLinkedList();
-            List<String> topCommentList = Lists.newLinkedList();
+            List<Comment> recentCommentList = Lists.newLinkedList();
+            List<Comment> topCommentList = Lists.newLinkedList();
             String commentResponse = InternetUtil.get("http://neihanshequ.com/m/api/get_essay_comments/?group_id=" + id
                     + "&app_name=neihanshequ_web&offset=0");
 
@@ -69,14 +69,22 @@ public class NHDZFetcher implements Fetcher {
             for (Object o : recentCommentsArray.toArray()) {
                 JSONObject o3 = (JSONObject) o;
                 String content = o3.getString("text");
-                recentCommentList.add(content);
+                String commentId = o3.getString("comment_id");
+                Comment c = new Comment();
+                c.setContent(content);
+                c.setId(commentId);
+                recentCommentList.add(c);
             }
 
             JSONArray topCommentsArray = o2.getJSONArray("top_comments");
             for (Object o : topCommentsArray.toArray()) {
                 JSONObject o3 = (JSONObject) o;
                 String content = o3.getString("text");
-                topCommentList.add(content);
+                String commentId = o3.getString("comment_id");
+                Comment c = new Comment();
+                c.setContent(content);
+                c.setId(commentId);
+                topCommentList.add(c);
             }
 
             dz.setRecentCommentList(recentCommentList);
@@ -91,6 +99,7 @@ public class NHDZFetcher implements Fetcher {
         String rawResponse = InternetUtil.get("http://www.neihanshequ.com");
         int idx = rawResponse.indexOf("var gGroupIdList = ['");
         String tmp1 = rawResponse.substring(idx + 21, rawResponse.length());
+        LOG.info("c : " + tmp1.substring(0, 200));
         int idx2 = tmp1.indexOf("',-1];");
         String tmp2 = tmp1.substring(0, idx2);
         LOG.info("idList = " + tmp2);
@@ -103,20 +112,22 @@ public class NHDZFetcher implements Fetcher {
             int dzId = 0;
             try {
                 dzId = jaxManager.addDZ(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID,
-                        dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceId());
+                        dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceDzId());
             } catch (Exception e) {
                 LOG.info("begin to try again.");
                 dzId = jaxManager.addDZ(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID,
-                        dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceId());
+                        dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceDzId());
                 LOG.info("try again finished.");
             }
+            if (dzId != -1) {
 
-            for (String content : dz.getRecentCommentList()) {
-                jaxManager.addRecentComment(content, dzId, randomHot());
-            }
+                for (Comment c : dz.getRecentCommentList()) {
+                    jaxManager.addRecentComment(c.getContent(), dzId, randomHot(), c.getId());
+                }
 
-            for (String content : dz.getTopcommentList()) {
-                jaxManager.addTopComment(content, dzId, randomTopHot());
+                for (Comment c : dz.getTopcommentList()) {
+                    jaxManager.addTopComment(c.getContent(), dzId, randomTopHot(), c.getId());
+                }
             }
 
             LOG.info("add dz(NHDZ). MD5={},dzId={},recentCommentSize={},topCommentSize={}", dz.getMd5(), dzId,
