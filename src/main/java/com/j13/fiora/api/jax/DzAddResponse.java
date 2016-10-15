@@ -1,13 +1,13 @@
 package com.j13.fiora.api.jax;
 
-public class DzAddResponse extends BaseResponse {
-    private int data;
+public class DzAddResponse  {
+    private int dzId;
 
-    public int getData() {
-        return data;
+    public int getDzId() {
+        return dzId;
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public void setDzId(int dzId) {
+        this.dzId = dzId;
     }
 }

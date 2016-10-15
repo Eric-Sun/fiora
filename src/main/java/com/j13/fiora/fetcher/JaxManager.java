@@ -2,6 +2,8 @@ package com.j13.fiora.fetcher;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Maps;
+import com.j13.fiora.api.jax.DZAddRecentCommentResponse;
+import com.j13.fiora.api.jax.DZAddTopCommentResponse;
 import com.j13.fiora.api.jax.DzAddResponse;
 import com.j13.fiora.core.FioraException;
 import com.j13.fiora.util.InternetUtil;
@@ -24,76 +26,68 @@ public class JaxManager {
 
 
     public int addDZ(int uid, String deviceId, String content, String md5, int fetchSource, long sourceDZId) throws FioraException {
-        Map<String, String> innerParams = Maps.newHashMap();
-        innerParams.put("content", content);
-        innerParams.put("md5", md5);
-        innerParams.put("fetchSource", fetchSource + "");
-        innerParams.put("sourceDZId", sourceDZId + "");
-
-
         Map<String, String> params = Maps.newHashMap();
-        params.put("args", JSON.toJSONString(innerParams));
         params.put("uid", uid + "");
         params.put("deviceId", deviceId);
         params.put("act", "dz.addFetchedDZ");
+        params.put("content", content);
+        params.put("md5", md5);
+        params.put("fetchSource", fetchSource + "");
+        params.put("sourceDZId", sourceDZId + "");
         String url = jaxServerUtil.getBaseUrl();
         String paramString = JSON.toJSONString(params);
 
 //        LOG.info("Url = " + url + " params = " + paramString);
         String rawResponse = InternetUtil.post(url, params);
-        DzAddResponse dzAddResponse = JSON.parseObject(rawResponse, DzAddResponse.class);
-        return dzAddResponse.getData();
+        int id = JSON.parseObject(rawResponse, Integer.class);
+        return id;
+
     }
 
     public int addRecentComment(String content, int dzId, int hot, String commentId) throws FioraException {
-        Map<String, String> innerParams = Maps.newHashMap();
-        innerParams.put("content", content);
-        innerParams.put("dzId", dzId + "");
-        innerParams.put("hot", hot + "");
-        innerParams.put("sourceCommentId", commentId);
+
 
         Map<String, String> params = Maps.newHashMap();
-        params.put("args", JSON.toJSONString(innerParams));
+        params.put("content", content);
+        params.put("dzId", dzId + "");
+        params.put("hot", hot + "");
+        params.put("sourceCommentId", commentId);
         params.put("act", "comment.addMachine");
         String url = jaxServerUtil.getBaseUrl();
         String paramString = JSON.toJSONString(params);
 
 //        LOG.info("Url = " + url + " params = " + paramString);
         String rawResponse = InternetUtil.post(url, params);
-        DzAddResponse dzAddResponse = JSON.parseObject(rawResponse, DzAddResponse.class);
-        return dzAddResponse.getData();
+        int id = JSON.parseObject(rawResponse, Integer.class);
+        return id;
     }
 
 
     public int addTopComment(String content, int dzId, int hot, String commentId) throws FioraException {
-        Map<String, String> innerParams = Maps.newHashMap();
-        innerParams.put("content", content);
-        innerParams.put("dzId", dzId + "");
-        innerParams.put("hot", hot + "");
-        innerParams.put("sourceCommentId", commentId);
-
         Map<String, String> params = Maps.newHashMap();
-        params.put("args", JSON.toJSONString(innerParams));
+        params.put("content", content);
+        params.put("dzId", dzId + "");
+        params.put("hot", hot + "");
+        params.put("sourceCommentId", commentId);
         params.put("act", "comment.addMachineTop");
         String url = jaxServerUtil.getBaseUrl();
         String paramString = JSON.toJSONString(params);
 
 //        LOG.info("Url = " + url + " params = " + paramString);
         String rawResponse = InternetUtil.post(url, params);
-        DzAddResponse dzAddResponse = JSON.parseObject(rawResponse, DzAddResponse.class);
-        return dzAddResponse.getData();
+        int id = JSON.parseObject(rawResponse, Integer.class);
+        return id;
     }
 
     public int addMachineUser(int uid, String deviceId, String userName, String fileName) throws FioraException {
-        Map<String, String> innerParams = Maps.newHashMap();
-        innerParams.put("nickName", userName);
-        innerParams.put("mobile", "-1");
-        innerParams.put("password", "-1");
-        innerParams.put("isMachine", "1");
 
 
         Map<String, String> params = Maps.newHashMap();
-        params.put("args", JSON.toJSONString(innerParams));
+        params.put("nickName", userName);
+        params.put("mobile", "-1");
+        params.put("password", "-1");
+        params.put("isMachine", "1");
+
         params.put("uid", uid + "");
         params.put("deviceId", deviceId);
         params.put("act", "user.register");
@@ -102,7 +96,8 @@ public class JaxManager {
 
         String rawResponse = InternetUtil.postFile(url, params, fileName);
         DzAddResponse dzAddResponse = JSON.parseObject(rawResponse, DzAddResponse.class);
-        return dzAddResponse.getData();
+//        return dzAddResponse.getData();
+        return 0;
 
     }
 }

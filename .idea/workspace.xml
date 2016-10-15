@@ -27,23 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FioraListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="525">
-              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="fiora.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/dev/fiora.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
-              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+              <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -59,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NHDZFetcher.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NHDZFetcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/NHDZFetcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47275922" vertical-offset="1231" max-vertical-offset="2010">
-              <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1366" max-vertical-offset="2010">
+              <caret line="113" column="37" selection-start-line="113" selection-start-column="37" selection-end-line="113" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -72,77 +60,52 @@
       <file leaf-file-name="DZ.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/DZ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="660">
+            <state vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="690">
               <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InternetUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/util/InternetUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1062" max-vertical-offset="2655">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FetchTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FetchTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="600">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#450#451#0" expanded="false" />
-                <element signature="e#480#481#0" expanded="false" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#658#659#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JaxManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JaxManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/JaxManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1500">
-              <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+            <state vertical-scroll-proportion="1.1318102" vertical-offset="31" max-vertical-offset="1395">
+              <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DzAddResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DzAddResponse.java">
+      <file leaf-file-name="JaxServerUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/util/JaxServerUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="225">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding>
-                <element signature="e#130#131#0" expanded="false" />
-                <element signature="e#157#158#0" expanded="false" />
-                <element signature="e#194#195#0" expanded="false" />
-                <element signature="e#226#227#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="315">
+              <caret line="11" column="95" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/BaseResponse.java">
+      <file leaf-file-name="FioraConstants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="300">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="e#133#134#0" expanded="false" />
-                <element signature="e#162#163#0" expanded="false" />
-                <element signature="e#203#204#0" expanded="false" />
-                <element signature="e#239#240#0" expanded="false" />
-                <element signature="e#266#267#0" expanded="false" />
-                <element signature="e#292#293#0" expanded="false" />
-                <element signature="e#327#328#0" expanded="false" />
-                <element signature="e#357#358#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="300">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fiora.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/deploy/fiora.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+              <caret line="0" column="44" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,9 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/com/j13/fiora/qsbk/Fetcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiona/starter/Fetcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/starter/Fetcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/Parser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/Handler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/Fetcher.java" />
@@ -171,7 +131,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/HDResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/exception/RequestFatalException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/config/PropertiesConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DzAddResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/util/JaxServerUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/BaseResponse.java" />
@@ -189,20 +148,24 @@
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/starter/ServerStarter.java" />
         <option value="$PROJECT_DIR$/bin/server-daemon.sh" />
         <option value="$PROJECT_DIR$/config/deploy/log4j.properties" />
-        <option value="$PROJECT_DIR$/config/deploy/fiora.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/QSBKFetcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/service/FetchService.java" />
-        <option value="$PROJECT_DIR$/config/dev/fiora.properties" />
         <option value="$PROJECT_DIR$/config/dev/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/DZ.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/JaxManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/util/InternetUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FetchTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/NHDZFetcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraException.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/config/deploy/fiora.properties" />
+        <option value="$PROJECT_DIR$/config/dev/fiora.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/ErrorResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DzAddResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DZAddRecentCommentResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DZAddTopCommentResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/JaxManager.java" />
       </list>
     </option>
   </component>
@@ -411,10 +374,76 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fiora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fiora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fiora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fiora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fiora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fiora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fiora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deploy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -801,22 +830,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -835,6 +848,22 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <configuration default="false" name="jetty-run" type="MavenRunConfiguration" factoryName="Maven">
@@ -939,16 +968,19 @@
       <workItem from="1474812594280" duration="1159000" />
       <workItem from="1474892554273" duration="126000" />
       <workItem from="1475064962867" duration="604000" />
-      <workItem from="1475080460738" duration="387000" />
+      <workItem from="1475080460738" duration="456000" />
+      <workItem from="1476378408460" duration="815000" />
+      <workItem from="1476379999162" duration="2532000" />
+      <workItem from="1476465273634" duration="16000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109157000" />
+    <option name="totallyTimeSpent" value="112589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="728" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -970,9 +1002,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31639344" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -993,18 +1025,18 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3164557" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3967213" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31639344" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5032787" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1047,20 +1079,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/config/PropertiesConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37128714" vertical-offset="30" max-vertical-offset="795">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/8.1.9.v20130131/jetty-server-8.1.9.v20130131-sources.jar!/org/eclipse/jetty/server/handler/ContextHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.7735295" vertical-offset="7672" max-vertical-offset="34245">
-          <caret line="730" column="42" selection-start-line="730" selection-start-column="7" selection-end-line="730" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar!/org/apache/http/client/entity/UrlEncodedFormEntity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.52" vertical-offset="67" max-vertical-offset="450">
@@ -1282,13 +1300,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy/fiora.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.038560413" vertical-offset="0" max-vertical-offset="389">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/dev/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
@@ -1310,20 +1321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28350514" vertical-offset="0" max-vertical-offset="582">
-          <caret line="11" column="70" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/util/JaxServerUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20618556" vertical-offset="0" max-vertical-offset="582">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
@@ -1338,31 +1335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/BaseResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="300">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#133#134#0" expanded="false" />
-            <element signature="e#162#163#0" expanded="false" />
-            <element signature="e#203#204#0" expanded="false" />
-            <element signature="e#239#240#0" expanded="false" />
-            <element signature="e#266#267#0" expanded="false" />
-            <element signature="e#292#293#0" expanded="false" />
-            <element signature="e#327#328#0" expanded="false" />
-            <element signature="e#357#358#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/DZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="690">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/util/InternetUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1062" max-vertical-offset="2655">
@@ -1371,36 +1343,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/JaxManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1500">
-          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DzAddResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#130#131#0" expanded="false" />
-            <element signature="e#157#158#0" expanded="false" />
-            <element signature="e#194#195#0" expanded="false" />
-            <element signature="e#226#227#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FetchTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="600">
           <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#450#451#0" expanded="false" />
-            <element signature="e#480#481#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1408,17 +1354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
           <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/dev/fiora.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,10 +1365,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/dev/fiora.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582">
+          <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/util/JaxServerUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="11" column="95" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/ErrorResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12886597" vertical-offset="0" max-vertical-offset="582">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/NHDZFetcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47275922" vertical-offset="1231" max-vertical-offset="2010">
-          <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1366" max-vertical-offset="2010">
+          <caret line="113" column="37" selection-start-line="113" selection-start-column="37" selection-end-line="113" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/DZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="690">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding>
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DzAddResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23195876" vertical-offset="0" max-vertical-offset="582">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy/fiora.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582">
+          <caret line="0" column="44" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DZAddRecentCommentResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12886597" vertical-offset="0" max-vertical-offset="582">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DZAddTopCommentResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12886597" vertical-offset="0" max-vertical-offset="582">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/JaxManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1318102" vertical-offset="31" max-vertical-offset="1395">
+          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
           <folding />
         </state>
       </provider>
