@@ -97,7 +97,7 @@ public class NHDZFetcher implements Fetcher {
 
     private Iterator<String> getAndParseDZId() throws FioraException {
         String rawResponse = InternetUtil.get("http://www.neihanshequ.com");
-        int idx = rawResponse.indexOf("var gGroupIdList = ['");
+        int idx = rawResponse.indexOf("var gGroupIdList = ");
         String tmp1 = rawResponse.substring(idx + 21, rawResponse.length());
         LOG.info("c : " + tmp1.substring(0, 200));
         int idx2 = tmp1.indexOf("',-1];");
