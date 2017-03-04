@@ -137,6 +137,8 @@ public class NHDZFetcher implements Fetcher {
             } catch (ErrorResponseException e) {
                 if (e.getCode() == ErrorCode.Comment.MACHINE_COMMENT_EXISTED) {
                     LOG.info("dz's comment existed. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
+                } else {
+                    LOG.error(e.toErrorString());
                 }
             }
 

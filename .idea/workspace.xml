@@ -30,13 +30,13 @@
       <file leaf-file-name="NHDZFetcher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/NHDZFetcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29864255" vertical-offset="1428" max-vertical-offset="2190">
-              <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.6380091" vertical-offset="1533" max-vertical-offset="2220">
+              <caret line="140" column="47" selection-start-line="140" selection-start-column="47" selection-end-line="140" selection-end-column="47" />
               <folding>
-                <element signature="e#6334#6335#0" expanded="true" />
-                <element signature="e#6375#6376#0" expanded="true" />
                 <element signature="e#6409#6410#0" expanded="true" />
-                <element signature="e#6457#6458#0" expanded="true" />
+                <element signature="e#6450#6451#0" expanded="true" />
+                <element signature="e#6484#6485#0" expanded="true" />
+                <element signature="e#6532#6533#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,9 +160,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/CommentAddMachineResp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/exception/CanBeIgnoreException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/ErrorResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/exception/ErrorResponseException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/JaxManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/ErrorCode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/exception/ErrorResponseException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/NHDZFetcher.java" />
       </list>
     </option>
@@ -1014,12 +1014,12 @@
       <workItem from="1487312504555" duration="939000" />
       <workItem from="1487491463852" duration="2560000" />
       <workItem from="1487679155289" duration="110000" />
-      <workItem from="1488615746981" duration="6472000" />
+      <workItem from="1488615746981" duration="6809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126478000" />
+    <option name="totallyTimeSpent" value="126815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="24" width="1280" height="727" extended-state="0" />
@@ -1460,19 +1460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/exception/ErrorResponseException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4945055" vertical-offset="0" max-vertical-offset="455">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="e#143#144#0" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/JaxManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49095023" vertical-offset="743" max-vertical-offset="1590">
@@ -1516,15 +1503,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/exception/ErrorResponseException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46153846" vertical-offset="0" max-vertical-offset="455">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/NHDZFetcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29864255" vertical-offset="1428" max-vertical-offset="2190">
-          <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.6380091" vertical-offset="1533" max-vertical-offset="2220">
+          <caret line="140" column="47" selection-start-line="140" selection-start-column="47" selection-end-line="140" selection-end-column="47" />
           <folding>
-            <element signature="e#6334#6335#0" expanded="true" />
-            <element signature="e#6375#6376#0" expanded="true" />
             <element signature="e#6409#6410#0" expanded="true" />
-            <element signature="e#6457#6458#0" expanded="true" />
+            <element signature="e#6450#6451#0" expanded="true" />
+            <element signature="e#6484#6485#0" expanded="true" />
+            <element signature="e#6532#6533#0" expanded="true" />
           </folding>
         </state>
       </provider>
