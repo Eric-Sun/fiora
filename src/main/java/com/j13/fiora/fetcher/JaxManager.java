@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Maps;
 import com.j13.fiora.api.jax.*;
 import com.j13.fiora.core.FioraException;
+import com.j13.fiora.core.exception.ErrorResponseException;
 import com.j13.fiora.util.InternetUtil;
 import com.j13.fiora.util.JaxServerUtil;
 import org.slf4j.Logger;
@@ -11,8 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
 
 @Service
@@ -42,7 +41,7 @@ public class JaxManager {
 
     }
 
-    public int addRecentComment(String content, int dzId, int hot, String commentId) throws FioraException {
+    public int addRecentComment(String content, int dzId, int hot, String commentId) throws FioraException, ErrorResponseException {
 
 
         Map<String, String> params = Maps.newHashMap();
@@ -57,12 +56,18 @@ public class JaxManager {
 
 //        LOG.info("Url = " + url + " params = " + paramString);
         String rawResponse = InternetUtil.post(url, params);
-        CommentAddMachineResp resp = JSON.parseObject(rawResponse, CommentAddMachineResp.class);
+        CommentAddMachineResp resp = null;
+        try {
+            resp = JSON.parseObject(rawResponse, CommentAddMachineResp.class);
+        } catch (Exception e) {
+            ErrorResponse error = JSON.parseObject(rawResponse, ErrorResponse.class);
+            throw new ErrorResponseException(error.getCode(), "");
+        }
         return resp.getId();
     }
 
 
-    public int addTopComment(String content, int dzId, int hot, String commentId) throws FioraException {
+    public int addTopComment(String content, int dzId, int hot, String commentId) throws FioraException, ErrorResponseException {
         Map<String, String> params = Maps.newHashMap();
         params.put("content", content);
         params.put("dzId", dzId + "");
@@ -74,7 +79,13 @@ public class JaxManager {
 
 //        LOG.info("Url = " + url + " params = " + paramString);
         String rawResponse = InternetUtil.post(url, params);
-        CommentAddMachineResp resp = JSON.parseObject(rawResponse, CommentAddMachineResp.class);
+        CommentAddMachineResp resp = null;
+        try {
+            resp = JSON.parseObject(rawResponse, CommentAddMachineResp.class);
+        } catch (Exception e) {
+            ErrorResponse error = JSON.parseObject(rawResponse, ErrorResponse.class);
+            throw new ErrorResponseException(error.getCode(), "");
+        }
         return resp.getId();
     }
 
