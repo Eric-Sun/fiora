@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
+import com.j13.fiora.api.jax.CommentAddMachineResp;
 import com.j13.fiora.core.ErrorCode;
 import com.j13.fiora.core.FioraConstants;
 import com.j13.fiora.core.FioraException;
@@ -117,31 +118,42 @@ public class NHDZFetcher implements Fetcher {
                         dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceDzId());
             } catch (Exception e) {
                 LOG.info("begin to try again.");
-                dzId = jaxManager.addDZ(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID,
-                        dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceDzId());
+                try {
+                    dzId = jaxManager.addDZ(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID,
+                            dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceDzId());
+                } catch (ErrorResponseException e1) {
+                    LOG.error("", e1);
+                }
                 LOG.info("try again finished.");
             }
             // 无论dz是否存在都会尝试插入评论
             String sourceCommentId = "";
-            try {
-                for (Comment c : dz.getRecentCommentList()) {
-                    sourceCommentId = c.getId();
+            for (Comment c : dz.getRecentCommentList()) {
+                sourceCommentId = c.getId();
+                try {
                     jaxManager.addRecentComment(c.getContent(), dzId, randomHot(), c.getId());
                     LOG.info("dz's comment added to recent. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
-                }
-                for (Comment c : dz.getTopcommentList()) {
-                    sourceCommentId = c.getId();
-                    jaxManager.addTopComment(c.getContent(), dzId, randomTopHot(), c.getId());
-                    LOG.info("dz's comment added to top. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
-                }
-            } catch (ErrorResponseException e) {
-                if (e.getCode() == ErrorCode.Comment.MACHINE_COMMENT_EXISTED) {
-                    LOG.info("dz's comment existed. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
-                } else {
-                    LOG.error(e.toErrorString());
+                } catch (ErrorResponseException e) {
+                    if (e.getCode() == ErrorCode.Comment.MACHINE_COMMENT_EXISTED) {
+                        LOG.info("dz's comment existed. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
+                    } else {
+                        LOG.error(e.toErrorString());
+                    }
                 }
             }
-
+            for (Comment c : dz.getTopcommentList()) {
+                sourceCommentId = c.getId();
+                try {
+                    jaxManager.addTopComment(c.getContent(), dzId, randomTopHot(), c.getId());
+                    LOG.info("dz's comment added to top. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
+                } catch (ErrorResponseException e) {
+                    if (e.getCode() == ErrorCode.Comment.MACHINE_COMMENT_EXISTED) {
+                        LOG.info("dz's comment existed. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
+                    } else {
+                        LOG.error(e.toErrorString());
+                    }
+                }
+            }
             LOG.info("add dz(NHDZ). MD5={},dzId={},recentCommentSize={},topCommentSize={}", dz.getMd5(), dzId,
                     dz.getRecentCommentList().size(), dz.getTopcommentList().size());
         }
@@ -155,6 +167,8 @@ public class NHDZFetcher implements Fetcher {
     private int randomTopHot() {
         return random.nextInt(100) + 100;
     }
+
+
 }
 
 

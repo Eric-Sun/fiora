@@ -4,6 +4,7 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.j13.fiora.core.FioraConstants;
 import com.j13.fiora.core.FioraException;
+import com.j13.fiora.core.exception.ErrorResponseException;
 import com.j13.fiora.util.InternetUtil;
 import com.j13.fiora.util.MD5Encrypt;
 import org.apache.http.HttpEntity;
@@ -56,8 +57,13 @@ public class QSBKFetcher implements Fetcher {
     private void save(List<DZ> dzList) throws FioraException {
 
         for (DZ dz : dzList) {
-            int dzId = jaxManager.addDZ(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID,
-                    dz.getContent(), dz.getMd5(), dz.getSourceId(), dz.getSourceDzId());
+            int dzId = 0;
+            try {
+                dzId = jaxManager.addDZ(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID,
+                        dz.getContent(), dz.getMd5(), dz.getSourceId(), dz.getSourceDzId());
+            } catch (ErrorResponseException e) {
+                LOG.error("", e);
+            }
 
             LOG.info("add dz(QSBK). MD5={}, dzId={}", dz.getMd5(), dzId);
         }

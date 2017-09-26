@@ -15,6 +15,9 @@ public class ErrorResponseException extends Exception {
         super(message);
         this.code = errorCode;
     }
+    public ErrorResponseException(int errorCode) {
+        this.code = errorCode;
+    }
 
     public String toErrorString() {
         return "WO CAO JAX HAS PROBLEM!!!!. code = " + code;
