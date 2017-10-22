@@ -1,4 +1,4 @@
-package com.j13.fiora.fetcher;
+package com.j13.fiora.fetcher.dz;
 
 import java.util.LinkedList;
 import java.util.List;

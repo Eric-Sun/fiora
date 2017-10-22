@@ -11,9 +11,6 @@
     </formats>
     <fileSets>
         <fileSet>
-            <directory>config</directory>
-        </fileSet>
-        <fileSet>
             <directory>bin</directory>
             <fileMode>755</fileMode>
         </fileSet>

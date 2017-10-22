@@ -1,4 +1,4 @@
-package com.j13.fiora.service;
+package com.j13.fiora.fetcher.user;
 
 import com.google.common.base.Splitter;
 import com.j13.fiora.core.FioraConstants;
@@ -6,7 +6,6 @@ import com.j13.fiora.core.FioraException;
 import com.j13.fiora.core.RequestData;
 import com.j13.fiora.core.config.PropertiesConfiguration;
 import com.j13.fiora.core.exception.ErrorResponseException;
-import com.j13.fiora.fetcher.JaxManager;
 import com.j13.fiora.util.InternetUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,9 +17,6 @@ import java.util.Iterator;
 @Service("FetchService")
 public class FetchService {
     private static Logger LOG = LoggerFactory.getLogger(FetchService.class);
-
-    @Autowired
-    JaxManager jaxManager;
 
     public int userFetch(RequestData requestData) throws FioraException {
         int start = requestData.getInteger("start");
@@ -58,12 +54,12 @@ public class FetchService {
             String fileName = InternetUtil.getAndSaveFile(url, dir);
 
             int data = 0;
-            try {
-                data = jaxManager.addMachineUser(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID
-                        , userName, fileName);
-            } catch (ErrorResponseException e) {
-                LOG.error("", e);
-            }
+//            try {
+//                data = jaxManager.addMachineUser(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID
+//                        , userName, fileName);
+//            } catch (ErrorResponseException e) {
+//                LOG.error("", e);
+//            }
             LOG.info("[MEIPAI] name={},url={},file={},response={},id={}", userName, url, fileName, data, id);
 
             InternetUtil.cleanTmpFile(dir, fileName);

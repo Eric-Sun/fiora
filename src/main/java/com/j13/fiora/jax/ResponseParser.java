@@ -1,7 +1,6 @@
-package com.j13.fiora.core;
+package com.j13.fiora.jax;
 
 import com.alibaba.fastjson.JSON;
-import com.j13.fiora.api.jax.ErrorResponse;
 import com.j13.fiora.core.exception.ErrorResponseException;
 
 public class ResponseParser {
@@ -15,5 +14,28 @@ public class ResponseParser {
 
         T response = JSON.parseObject(s, clazz);
         return response;
+    }
+}
+
+class ErrorResponse {
+
+
+    public static int NO_ERROR = 0;
+
+    public ErrorResponse() {
+    }
+
+    public ErrorResponse(int code) {
+        this.code = code;
+    }
+
+    private int code = NO_ERROR;
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
     }
 }

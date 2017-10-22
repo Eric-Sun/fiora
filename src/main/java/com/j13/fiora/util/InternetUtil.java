@@ -59,7 +59,7 @@ public class InternetUtil {
     }
 
 
-    public static String post(String url, Map<String, String> params) throws FioraException {
+    public static String post(String url, Map<String, Object> params) throws FioraException {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         CloseableHttpResponse response = null;
         try {
@@ -68,7 +68,7 @@ public class InternetUtil {
 
             Set<String> keySet = params.keySet();
             for (String key : keySet) {
-                nvps.add(new BasicNameValuePair(key, params.get(key)));
+                nvps.add(new BasicNameValuePair(key, params.get(key).toString()));
             }
 
 

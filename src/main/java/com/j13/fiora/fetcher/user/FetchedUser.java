@@ -1,4 +1,4 @@
-package com.j13.fiora.fetcher;
+package com.j13.fiora.fetcher.user;
 
 public class FetchedUser {
     private String userName;
