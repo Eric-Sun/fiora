@@ -8,7 +8,10 @@ import com.j13.fiora.fetcher.Fetcher;
 import com.j13.fiora.util.InternetUtil;
 import com.j13.fiora.util.JaxServerUtil;
 import com.j13.jax.fetcher.req.FetcherCheckAlbumExistReq;
+import com.j13.jax.fetcher.resp.FetcherAlbumAddResp;
 import com.j13.jax.fetcher.resp.FetcherGetAlbumIdResp;
+import com.j13.jax.fetcher.resp.FetcherGetLastIndexResp;
+import com.j13.jax.user.resp.UserRandomUserResp;
 import com.j13.poppy.core.CommonResultResp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,17 +41,19 @@ public class AlbumRemoteService {
     }
 
 
-    public int addAlbum(int sourceId, int remoteAlbumId) throws FioraException {
+    public int addAlbum(int sourceId, int remoteAlbumId, int tagId, String title) throws FioraException {
         Map<String, Object> params = Maps.newHashMap();
         params.put("remoteAlbumId", remoteAlbumId);
         params.put("sourceId", sourceId);
+        params.put("tagId", tagId);
+        params.put("title", title);
         params.put("act", "fetcher.albumAdd");
         String url = jaxServerUtil.getBaseUrl();
         String rawResponse = InternetUtil.post(url, params);
-        FetcherGetAlbumIdResp resp = null;
+        FetcherAlbumAddResp resp = null;
         try {
-            resp = ResponseParser.parse(rawResponse, FetcherGetAlbumIdResp.class);
-            return resp.getId();
+            resp = ResponseParser.parse(rawResponse, FetcherAlbumAddResp.class);
+            return resp.getAlbumId();
         } catch (ErrorResponseException e) {
             return 0;
         }
@@ -99,6 +104,72 @@ public class AlbumRemoteService {
             return resp.getResult() == 0 ? true : false;
         } catch (ErrorResponseException e) {
             return false;
+        }
+    }
+
+
+    public int getLastIndex(int sourceId) throws FioraException {
+        Map<String, Object> params = Maps.newHashMap();
+        params.put("sourceId", sourceId);
+        params.put("act", "fetcher.getLastIndex");
+        String url = jaxServerUtil.getBaseUrl();
+        String rawResponse = InternetUtil.post(url, params);
+        FetcherGetLastIndexResp resp = null;
+        try {
+            resp = ResponseParser.parse(rawResponse, FetcherGetLastIndexResp.class);
+            return resp.getIndex();
+        } catch (ErrorResponseException e) {
+            return 0;
+        }
+    }
+
+
+    public boolean updateLastIndex(int sourceId, int lastIndex) throws FioraException {
+        Map<String, Object> params = Maps.newHashMap();
+        params.put("sourceId", sourceId);
+        params.put("lastIndex", lastIndex);
+        params.put("act", "fetcher.updateLastIndex");
+        String url = jaxServerUtil.getBaseUrl();
+        String rawResponse = InternetUtil.post(url, params);
+        CommonResultResp resp = null;
+        try {
+            resp = ResponseParser.parse(rawResponse, CommonResultResp.class);
+            return resp.getResult() == 0 ? true : false;
+        } catch (ErrorResponseException e) {
+            return false;
+        }
+    }
+
+
+    public int randomUser() throws FioraException {
+        Map<String, Object> params = Maps.newHashMap();
+        params.put("act", "user.randomUser");
+        String url = jaxServerUtil.getBaseUrl();
+        String rawResponse = InternetUtil.post(url, params);
+        UserRandomUserResp resp = null;
+        try {
+            resp = ResponseParser.parse(rawResponse, UserRandomUserResp.class);
+            return resp.getUid();
+        } catch (ErrorResponseException e) {
+            return 0;
+        }
+    }
+
+
+    public void addEvent(int userId, int familyId, int type, String title, String content) throws FioraException {
+        Map<String, Object> params = Maps.newHashMap();
+        params.put("userId", userId);
+        params.put("familyId", familyId);
+        params.put("type", type);
+        params.put("title", title);
+        params.put("content", content);
+        params.put("act", "event.add");
+        String url = jaxServerUtil.getBaseUrl();
+        String rawResponse = InternetUtil.post(url, params);
+        CommonResultResp resp = null;
+        try {
+            resp = ResponseParser.parse(rawResponse, CommonResultResp.class);
+        } catch (ErrorResponseException e) {
         }
     }
 }

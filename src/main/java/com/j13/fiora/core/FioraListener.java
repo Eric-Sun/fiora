@@ -15,16 +15,15 @@ public class  FioraListener implements ServletContextListener {
 
         PropertiesConfiguration.getInstance().addResource("/fiora.properties");
 
-//        if (PropertiesConfiguration.getInstance().getStringValue("fetch.switch").equals("on")) {
-//            FetchTask fetchTask = new FetchTask(sce);
-//            new Thread(fetchTask).start();
-//            LOG.info("Fetch task started.");
-//        }else{
-//            LOG.info("Fetch task switch off");
-//
-//        }
+        if (PropertiesConfiguration.getInstance().getStringValue("fetch.switch").equals("on")) {
+            FetchTask fetchTask = new FetchTask(sce);
+            new Thread(fetchTask).start();
+            LOG.info("Fetch task started.");
+        }else{
+            LOG.info("Fetch task switch off");
 
-        LOG.info("fdasfsa");
+        }
+
 
 
     }

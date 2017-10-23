@@ -48,7 +48,7 @@ case $action in
 		exit -1
 	fi
 	JAVA_OPT="-server -Xms64m -Xmx128m -XX:NewSize=32m -XX:MaxNewSize=128m -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=70 -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintTenuringDistribution -Xloggc:$SERVER_LOGS/gc.log -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$SERVER_LOGS/gc_dump"
-    nohup java $JAVA_OPT -DSERVER_HOME=$SERVER_HOME -Djava.library.path=$JAVA_LIBRARY_PATH -classpath $CLASSPATH:$SERVER_HOME/server.jar com.j13.fiora.starter.ServerStarter $SERVER_TMP >>$SERVER_LOGS_OUT_FILE 2>&1 &
+    nohup java $JAVA_OPT -DSERVER_HOME=$SERVER_HOME -Djava.library.path=$JAVA_LIBRARY_PATH -classpath $CLASSPATH:$SERVER_HOME/server.jar com.j13.poppy.starter.ServerStarter $SERVER_TMP 8082 >>$SERVER_LOGS_OUT_FILE 2>&1 &
 	echo $! > $SERVER_PID_FILE
 	echo "See log file: $SERVER_LOGS_OUT_FILE"
 	;;
