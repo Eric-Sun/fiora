@@ -48,6 +48,13 @@ public class MM131Fetcher implements Fetcher {
             if (albumRemoteService.checkAlbumExist(albumRemoteId)) {
                 LOG.info("album has been saved. id={}", albumRemoteId);
                 continue;
+            } else {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
             }
             for (int j = 1; j < 100; j++) {
 
@@ -97,7 +104,7 @@ public class MM131Fetcher implements Fetcher {
                             // 总为0
                             int randomUserId = albumRemoteService.randomUser();
                             LOG.info("random user success. userId = {}", randomUserId);
-                            albumRemoteService.addEvent(randomUserId, 1, -1, "", albumId + "");
+                            albumRemoteService.addEvent(randomUserId, -1, -1, "", albumId + "");
                             LOG.info("add event. ");
 
                         } else {
