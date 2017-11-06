@@ -7,10 +7,9 @@ import com.j13.fiora.core.exception.ErrorResponseException;
 import com.j13.fiora.fetcher.Fetcher;
 import com.j13.fiora.util.InternetUtil;
 import com.j13.fiora.util.JaxServerUtil;
-import com.j13.jax.fetcher.req.FetcherCheckAlbumExistReq;
-import com.j13.jax.fetcher.resp.FetcherAlbumAddResp;
-import com.j13.jax.fetcher.resp.FetcherGetAlbumIdResp;
 import com.j13.jax.fetcher.resp.FetcherGetLastIndexResp;
+import com.j13.jax.fetcher.resp.FetcherGetMVAlbumIdResp;
+import com.j13.jax.fetcher.resp.FetcherMVAlbumAddResp;
 import com.j13.jax.user.resp.UserRandomUserResp;
 import com.j13.poppy.core.CommonResultResp;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +26,7 @@ public class AlbumRemoteService {
     public boolean checkAlbumExist(int remoteAlbumId) throws FioraException {
         Map<String, Object> params = Maps.newHashMap();
         params.put("remoteAlbumId", remoteAlbumId);
-        params.put("act", "fetcher.checkAlbumExist");
+        params.put("act", "fetcher.checkMVAlbumExist");
         String url = jaxServerUtil.getBaseUrl();
 
         String rawResponse = InternetUtil.post(url, params);
@@ -41,19 +40,20 @@ public class AlbumRemoteService {
     }
 
 
-    public int addAlbum(int sourceId, int remoteAlbumId, int tagId, String title) throws FioraException {
+    public int addAlbum(int sourceId, int remoteAlbumId, int tagId, String title, int userId) throws FioraException {
         Map<String, Object> params = Maps.newHashMap();
         params.put("remoteAlbumId", remoteAlbumId);
         params.put("sourceId", sourceId);
         params.put("tagId", tagId);
         params.put("title", title);
-        params.put("act", "fetcher.albumAdd");
+        params.put("act", "fetcher.mvAlbumAdd");
+        params.put("userId", userId);
         String url = jaxServerUtil.getBaseUrl();
         String rawResponse = InternetUtil.post(url, params);
-        FetcherAlbumAddResp resp = null;
+        FetcherMVAlbumAddResp resp = null;
         try {
-            resp = ResponseParser.parse(rawResponse, FetcherAlbumAddResp.class);
-            return resp.getAlbumId();
+            resp = ResponseParser.parse(rawResponse, FetcherMVAlbumAddResp.class);
+            return resp.getMvAlbumId();
         } catch (ErrorResponseException e) {
             return 0;
         }
@@ -62,10 +62,10 @@ public class AlbumRemoteService {
     public void addImg(String relationLocalPath, int albumId, String remoteUrl, int remoteImgId) throws FioraException {
         Map<String, Object> params = Maps.newHashMap();
         params.put("relationLocalPath", relationLocalPath);
-        params.put("albumId", albumId);
+        params.put("mvAlbumId", albumId);
         params.put("remoteUrl", remoteUrl);
         params.put("remoteImgId", remoteImgId);
-        params.put("act", "fetcher.imgAdd");
+        params.put("act", "fetcher.mvImgAdd");
         String url = jaxServerUtil.getBaseUrl();
         String rawResponse = InternetUtil.post(url, params);
         CommonResultResp resp = null;
@@ -80,12 +80,12 @@ public class AlbumRemoteService {
     public int getAlbumId(int remoteAlbumId) throws FioraException {
         Map<String, Object> params = Maps.newHashMap();
         params.put("remoteAlbumId", remoteAlbumId);
-        params.put("act", "fetcher.getAlbumId");
+        params.put("act", "fetcher.getMVAlbumId");
         String url = jaxServerUtil.getBaseUrl();
         String rawResponse = InternetUtil.post(url, params);
-        FetcherGetAlbumIdResp resp = null;
+        FetcherGetMVAlbumIdResp resp = null;
         try {
-            resp = ResponseParser.parse(rawResponse, FetcherGetAlbumIdResp.class);
+            resp = ResponseParser.parse(rawResponse, FetcherGetMVAlbumIdResp.class);
             return resp.getId();
         } catch (ErrorResponseException e) {
             return 0;
@@ -95,7 +95,7 @@ public class AlbumRemoteService {
     public boolean checkImgExist(String remoteImgUrl) throws FioraException {
         Map<String, Object> params = Maps.newHashMap();
         params.put("remoteImgUrl", remoteImgUrl);
-        params.put("act", "fetcher.checkImgExist");
+        params.put("act", "fetcher.checkMVImgExist");
         String url = jaxServerUtil.getBaseUrl();
         String rawResponse = InternetUtil.post(url, params);
         CommonResultResp resp = null;

@@ -96,16 +96,16 @@ public class MM131Fetcher implements Fetcher {
                                 }
                             }
 
-
-                            albumId = albumRemoteService.addAlbum(SOURCE_ID, albumRemoteId, tagId, title);
+                            int randomUserId = albumRemoteService.randomUser();
+                            LOG.info("random user success. userId = {}", randomUserId);
+                            albumId = albumRemoteService.addAlbum(SOURCE_ID, albumRemoteId, tagId, title, randomUserId);
                             LOG.info("add success. albumId = {}", albumId);
 
                             // 随机用户，添加event
                             // 总为0
-                            int randomUserId = albumRemoteService.randomUser();
-                            LOG.info("random user success. userId = {}", randomUserId);
-                            albumRemoteService.addEvent(randomUserId, -1, -1, "", albumId + "");
-                            LOG.info("add event. ");
+                            // 171103 不插入event
+//                            albumRemoteService.addEvent(randomUserId, -1, -1, "", albumId + "");
+//                            LOG.info("add event. ");
 
                         } else {
                             albumId = albumRemoteService.getAlbumId(albumRemoteId);
@@ -195,8 +195,8 @@ public class MM131Fetcher implements Fetcher {
         URL url = new URL(urlStr);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 //        //设置超时间为3秒
-        conn.setConnectTimeout(2000);
-        conn.setReadTimeout(1000);
+        conn.setConnectTimeout(4000);
+        conn.setReadTimeout(2000);
         conn.setRequestProperty("Referer", "http://www.mm131.com/qingchun/2194.html");
 
         //防止屏蔽程序抓取而返回403错误

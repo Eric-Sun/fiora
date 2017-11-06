@@ -55,7 +55,6 @@ public class NHDZFetcher implements Fetcher {
             dz.setMd5(MD5Encrypt.encode(dzContent));
             dz.setSourceId(FioraConstants.FetchSource.NHDZ);
             dz.setSourceDzId(new Long(id));
-            dzList.add(dz);
 
 
             // comment
@@ -88,8 +87,15 @@ public class NHDZFetcher implements Fetcher {
                 topCommentList.add(c);
             }
 
-            dz.setRecentCommentList(recentCommentList);
-            dz.setTopcommentList(topCommentList);
+            if (topCommentList.size() > 3) {
+                dzList.add(dz);
+                dz.setRecentCommentList(recentCommentList);
+                dz.setTopcommentList(topCommentList);
+                LOG.info("dz topComment size = {}, add.", topCommentList.size());
+            } else {
+                continue;
+            }
+
 
         }
         return dzList;
@@ -122,7 +128,7 @@ public class NHDZFetcher implements Fetcher {
 //                } catch (ErrorResponseException e1) {
 //                    LOG.error("", e1);
 //                }
-                LOG.info("try again finished.");
+            LOG.info("try again finished.");
 //            }
             // 无论dz是否存在都会尝试插入评论
 //            String sourceCommentId = "";
