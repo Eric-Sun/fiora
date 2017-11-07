@@ -1,4 +1,4 @@
-package com.j13.fiora.fetcher.dz;
+package com.j13.fiora.fetcher.nhdz;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -7,7 +7,7 @@ public class DZ {
     private String content;
     private String md5;
     private int sourceId;
-    private long sourceDzId;
+    private String sourceDzId;
     private List<Comment> recentCommentList = new LinkedList<Comment>();
     private List<Comment> topcommentList = new LinkedList<Comment>();
 
@@ -27,11 +27,11 @@ public class DZ {
         this.topcommentList = topcommentList;
     }
 
-    public long getSourceDzId() {
+    public String getSourceDzId() {
         return sourceDzId;
     }
 
-    public void setSourceDzId(long sourceDzId) {
+    public void setSourceDzId(String sourceDzId) {
         this.sourceDzId = sourceDzId;
     }
 

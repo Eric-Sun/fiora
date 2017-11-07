@@ -1,4 +1,4 @@
-package com.j13.fiora.fetcher.dz;
+package com.j13.fiora.fetcher.nhdz;
 
 public class Comment {
     private String content;

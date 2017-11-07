@@ -1,4 +1,4 @@
-package com.j13.fiora.fetcher.dz;
+package com.j13.fiora.fetcher.nhdz;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -10,6 +10,8 @@ import com.j13.fiora.core.FioraConstants;
 import com.j13.fiora.core.FioraException;
 import com.j13.fiora.core.exception.ErrorResponseException;
 import com.j13.fiora.fetcher.Fetcher;
+import com.j13.fiora.jax.AlbumRemoteService;
+import com.j13.fiora.jax.DZRemoteService;
 import com.j13.fiora.util.InternetUtil;
 import com.j13.fiora.util.MD5Encrypt;
 import org.slf4j.Logger;
@@ -24,9 +26,14 @@ import java.util.Random;
 
 @Service
 public class NHDZFetcher implements Fetcher {
+    public static int SOURCE_ID = 2;
 
     private static Logger LOG = LoggerFactory.getLogger(NHDZFetcher.class);
     private Random random = new Random();
+    @Autowired
+    DZRemoteService dzRemoteService;
+    @Autowired
+    AlbumRemoteService albumRemoteService;
 
 
     @Override
@@ -53,8 +60,8 @@ public class NHDZFetcher implements Fetcher {
             DZ dz = new DZ();
             dz.setContent(dzContent.trim().replaceAll("<p>", "").replaceAll("</p>", ""));
             dz.setMd5(MD5Encrypt.encode(dzContent));
-            dz.setSourceId(FioraConstants.FetchSource.NHDZ);
-            dz.setSourceDzId(new Long(id));
+            dz.setSourceId(SOURCE_ID);
+            dz.setSourceDzId(new String(id));
 
 
             // comment
@@ -87,7 +94,7 @@ public class NHDZFetcher implements Fetcher {
                 topCommentList.add(c);
             }
 
-            if (topCommentList.size() > 3) {
+            if (topCommentList.size() > 5) {
                 dzList.add(dz);
                 dz.setRecentCommentList(recentCommentList);
                 dz.setTopcommentList(topCommentList);
@@ -116,60 +123,39 @@ public class NHDZFetcher implements Fetcher {
 
     private void save(List<DZ> recordList) throws FioraException {
         for (DZ dz : recordList) {
+            int randomUserId = albumRemoteService.randomUser();
+            LOG.info("random user. userId = {}", randomUserId);
             int dzId = 0;
-//            try {
-//                dzId = jaxManager.addDZ(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID,
-//                        dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceDzId());
-//            } catch (Exception e) {
-//                LOG.info("begin to try again.");
-//                try {
-//                    dzId = jaxManager.addDZ(FioraConstants.SYSTEM_FETCHER_USER_ID, FioraConstants.SYSTEM_FETCHER_DEFAULT_DEVICEID,
-//                            dz.getContent(), dz.getMd5(), FioraConstants.FetchSource.NHDZ, dz.getSourceDzId());
-//                } catch (ErrorResponseException e1) {
-//                    LOG.error("", e1);
-//                }
-            LOG.info("try again finished.");
-//            }
+            try {
+                dzId = dzRemoteService.addDZ(randomUserId, dz.getContent(), dz.getSourceDzId(), SOURCE_ID);
+                LOG.info("dz added. dzId={}", dzId);
+            } catch (ErrorResponseException e) {
+                continue;
+            }
             // 无论dz是否存在都会尝试插入评论
-//            String sourceCommentId = "";
-//            for (Comment c : dz.getRecentCommentList()) {
-//                sourceCommentId = c.getId();
-//                try {
-//                    jaxManager.addRecentComment(c.getContent(), dzId, randomHot(), c.getId());
-//                    LOG.info("dz's comment added to recent. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
-//                } catch (ErrorResponseException e) {
-//                    if (e.getCode() == ErrorCode.Comment.MACHINE_COMMENT_EXISTED) {
-//                        LOG.info("dz's comment existed. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
-//                    } else {
-//                        LOG.error(e.toErrorString());
-//                    }
-//                }
-//            }
-//            for (Comment c : dz.getTopcommentList()) {
-//                sourceCommentId = c.getId();
-//                try {
-//                    jaxManager.addTopComment(c.getContent(), dzId, randomTopHot(), c.getId());
-//                    LOG.info("dz's comment added to top. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
-//                } catch (ErrorResponseException e) {
-//                    if (e.getCode() == ErrorCode.Comment.MACHINE_COMMENT_EXISTED) {
-//                        LOG.info("dz's comment existed. dzId={}, sourceCommentId={}", dzId, sourceCommentId);
-//                    } else {
-//                        LOG.error(e.toErrorString());
-//                    }
-//                }
-//            }
-            LOG.info("add dz(NHDZ). MD5={},dzId={},recentCommentSize={},topCommentSize={}", dz.getMd5(), dzId,
+            for (Comment c : dz.getRecentCommentList()) {
+                int randomRecentCommentUserId = albumRemoteService.randomUser();
+                try {
+                    int commentId = dzRemoteService.addComment(dzId, c.getContent(), randomRecentCommentUserId, 0);
+                    LOG.info("dz's comment added to recent. dzId={}, randomRecentCommentUserId={},commentId={}", dzId, randomRecentCommentUserId, commentId);
+                } catch (Exception e) {
+                    LOG.info("error.", e);
+                    continue;
+                }
+            }
+            for (Comment c : dz.getTopcommentList()) {
+                try {
+                    int randomTopCommentUserId = albumRemoteService.randomUser();
+                    int commentId = dzRemoteService.addComment(dzId, c.getContent(), randomTopCommentUserId, 1);
+                    LOG.info("dz's comment added to top. dzId={}, randomTopCommentUserId={},commentId={}", dzId, randomTopCommentUserId, commentId);
+                } catch (Exception e) {
+                    LOG.info("error.", e);
+                    continue;
+                }
+            }
+            LOG.info("add dz(NHDZ).dzId={},recentCommentSize={},topCommentSize={}", dzId,
                     dz.getRecentCommentList().size(), dz.getTopcommentList().size());
         }
-    }
-
-
-    private int randomHot() {
-        return random.nextInt(10);
-    }
-
-    private int randomTopHot() {
-        return random.nextInt(100) + 100;
     }
 
 

@@ -1,34 +1,30 @@
 package com.j13.fiora.core;
 
 import com.j13.fiora.fetcher.Fetcher;
-import com.j13.fiora.fetcher.dz.NHDZFetcher;
 import com.j13.fiora.fetcher.mm131.MM131Fetcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletContextEvent;
-import java.util.Random;
 
 public class FetchTask implements Runnable {
 
     private static Logger LOG = LoggerFactory.getLogger(FetchTask.class);
     private ServletContextEvent sce = null;
 
-    public FetchTask(ServletContextEvent sce) {
+    private Class fetcherClazz = null;
+
+    public FetchTask(ServletContextEvent sce, Class fetcherClazz) {
         this.sce = sce;
+        this.fetcherClazz = fetcherClazz;
     }
 
     @Override
     public void run() {
         WebApplicationContentHolder.setServletContext(sce.getServletContext());
-//        NHDZFetcher fetcher1 = WebApplicationContentHolder.getApplicationContext().getBean(NHDZFetcher.class);
-        // close qsbk    2016/8/29
-//        QSBKFetcher fetcher2 = WebApplicationContentHolder.getApplicationContext().getBean(QSBKFetcher.class);
-
-        MM131Fetcher fetcher1 = WebApplicationContentHolder.getApplicationContext().getBean(MM131Fetcher.class);
-//        Fetcher fetcher1 = WebApplicationContentHolder.getApplicationContext().getBean(NHDZFetcher.class);
+        Fetcher fetcher = (Fetcher) WebApplicationContentHolder.getApplicationContext().getBean(fetcherClazz);
         try {
-            fetcher1.fetch();
+            fetcher.fetch();
         } catch (FioraException e) {
             e.printStackTrace();
         }
