@@ -24,7 +24,9 @@ public class FetchTask implements Runnable {
         WebApplicationContentHolder.setServletContext(sce.getServletContext());
         Fetcher fetcher = (Fetcher) WebApplicationContentHolder.getApplicationContext().getBean(fetcherClazz);
         try {
-            fetcher.fetch();
+            while (true) {
+                fetcher.fetch();
+            }
         } catch (FioraException e) {
             e.printStackTrace();
         }

@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="252cb69a-b897-4650-add9-236382a6f7dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/DZRemoteService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/dz/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/Comment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/dz/DZ.java" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/DZ.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/dz/NHDZFetcher.java" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/NHDZFetcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jax-api-0.0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/lib/jax-api-0.0.1-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/DZRemoteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/DZRemoteService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FetchTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FetchTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraConstants.java" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/HDConstants.java" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/HDConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/j13/fiora/util/InternetUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/util/InternetUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/NHDZFetcher.java" afterPath="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/NHDZFetcher.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy/fiora.properties" afterPath="$PROJECT_DIR$/config/deploy/fiora.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/dev/fiora.properties" afterPath="$PROJECT_DIR$/config/dev/fiora.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy/log4j.properties" afterPath="$PROJECT_DIR$/config/deploy/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy/poppy.properties" afterPath="$PROJECT_DIR$/config/deploy/poppy.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiona.iws" />
@@ -45,351 +43,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DZRemoteService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/DZRemoteService.java">
+      <file leaf-file-name="NHDZFetcher.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/NHDZFetcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45663717" vertical-offset="87" max-vertical-offset="855">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.039045554" vertical-offset="1302" max-vertical-offset="2745">
+              <caret line="88" column="35" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FioraListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraListener.java">
+      <file leaf-file-name="InternetUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/util/InternetUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="630">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2700">
+              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fiora.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/dev/fiora.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DZ.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/DZ.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="690">
+              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#821#822#0" expanded="true" />
+                <element signature="e#854#855#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PropertiesConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/config/PropertiesConfiguration.java">
+      <file leaf-file-name="FetchTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FetchTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="735">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1234#1235#0" expanded="false" />
-                <element signature="e#1277#1278#0" expanded="false" />
-                <element signature="e#1319#1320#0" expanded="false" />
-                <element signature="e#1393#1394#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServletContextHandler.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlet/8.1.9.v20130131/jetty-servlet-8.1.9.v20130131-sources.jar!/org/eclipse/jetty/servlet/ServletContextHandler.java">
+      <file leaf-file-name="Fetcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/Fetcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5127" max-vertical-offset="17055">
-              <caret line="428" column="0" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#44673#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#3896#3897#0" expanded="false" />
-                <element signature="e#3942#3943#0" expanded="false" />
-                <element signature="e#4070#4071#0" expanded="false" />
-                <element signature="e#4109#4110#0" expanded="false" />
-                <element signature="e#6737#6738#0" expanded="false" />
-                <element signature="e#6788#6789#0" expanded="false" />
-                <element signature="e#7310#7311#0" expanded="false" />
-                <element signature="e#7353#7354#0" expanded="false" />
-                <element signature="e#7826#7827#0" expanded="false" />
-                <element signature="e#7869#7870#0" expanded="false" />
-                <element signature="e#13041#13042#0" expanded="false" />
-                <element signature="e#13088#13089#0" expanded="false" />
-                <element signature="e#15345#15346#0" expanded="false" />
-                <element signature="e#15386#15387#0" expanded="false" />
-                <element signature="e#15453#15454#0" expanded="false" />
-                <element signature="e#15512#15513#0" expanded="false" />
-                <element signature="e#17509#17510#0" expanded="false" />
-                <element signature="e#17573#17574#0" expanded="false" />
-                <element signature="e#18048#18049#0" expanded="false" />
-                <element signature="e#18090#18091#0" expanded="false" />
-                <element signature="e#19888#19889#0" expanded="false" />
-                <element signature="e#19929#19930#0" expanded="false" />
-                <element signature="e#19992#19993#0" expanded="false" />
-                <element signature="e#20030#20031#0" expanded="false" />
-                <element signature="e#20192#20193#0" expanded="false" />
-                <element signature="e#20236#20237#0" expanded="false" />
-                <element signature="e#20312#20313#0" expanded="false" />
-                <element signature="e#20364#20365#0" expanded="false" />
-                <element signature="e#20440#20441#0" expanded="false" />
-                <element signature="e#20500#20501#0" expanded="false" />
-                <element signature="e#20554#20555#0" expanded="false" />
-                <element signature="e#20592#20593#0" expanded="false" />
-                <element signature="e#21032#21033#0" expanded="false" />
-                <element signature="e#21096#21097#0" expanded="false" />
-                <element signature="e#21152#21153#0" expanded="false" />
-                <element signature="e#21192#21193#0" expanded="false" />
-                <element signature="e#21538#21539#0" expanded="false" />
-                <element signature="e#21586#21587#0" expanded="false" />
-                <element signature="e#21734#21735#0" expanded="false" />
-                <element signature="e#21771#21772#0" expanded="false" />
-                <element signature="e#22395#22396#0" expanded="false" />
-                <element signature="e#22479#22480#0" expanded="false" />
-                <element signature="e#22843#22844#0" expanded="false" />
-                <element signature="e#22905#22906#0" expanded="false" />
-                <element signature="e#23091#23092#0" expanded="false" />
-                <element signature="e#23147#23148#0" expanded="false" />
-                <element signature="e#23321#23322#0" expanded="false" />
-                <element signature="e#23371#23372#0" expanded="false" />
-                <element signature="e#23521#23522#0" expanded="false" />
-                <element signature="e#23559#23560#0" expanded="false" />
-                <element signature="e#23749#23750#0" expanded="false" />
-                <element signature="e#23807#23808#0" expanded="false" />
-                <element signature="e#25149#25150#0" expanded="false" />
-                <element signature="e#25183#25184#0" expanded="false" />
-                <element signature="e#25247#25248#0" expanded="false" />
-                <element signature="e#25281#25282#0" expanded="false" />
-                <element signature="e#25437#25438#0" expanded="false" />
-                <element signature="e#25477#25478#0" expanded="false" />
-                <element signature="e#25551#25552#0" expanded="false" />
-                <element signature="e#25595#25596#0" expanded="false" />
-                <element signature="e#25643#25644#0" expanded="false" />
-                <element signature="e#25735#25736#0" expanded="false" />
-                <element signature="e#26299#26300#0" expanded="false" />
-                <element signature="e#26371#26372#0" expanded="false" />
-                <element signature="e#26451#26452#0" expanded="false" />
-                <element signature="e#26490#26491#0" expanded="false" />
-                <element signature="e#26867#26868#0" expanded="false" />
-                <element signature="e#26916#26917#0" expanded="false" />
-                <element signature="e#43399#43400#0" expanded="false" />
-                <element signature="e#43440#43441#0" expanded="false" />
-                <element signature="e#43543#43544#0" expanded="false" />
-                <element signature="e#43581#43582#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContextHandler.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/8.1.9.v20130131/jetty-server-8.1.9.v20130131-sources.jar!/org/eclipse/jetty/server/handler/ContextHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="8742" max-vertical-offset="34245">
-              <caret line="723" column="0" selection-start-line="723" selection-start-column="0" selection-end-line="723" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#84920#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#5116#5117#0" expanded="false" />
-                <element signature="e#5154#5155#0" expanded="false" />
-                <element signature="e#8806#8807#0" expanded="false" />
-                <element signature="e#8838#8839#0" expanded="false" />
-                <element signature="e#9059#9060#0" expanded="false" />
-                <element signature="e#9100#9101#0" expanded="false" />
-                <element signature="e#9356#9357#0" expanded="false" />
-                <element signature="e#9410#9411#0" expanded="false" />
-                <element signature="e#14827#14828#0" expanded="false" />
-                <element signature="e#14857#14858#0" expanded="false" />
-                <element signature="e#16053#16054#0" expanded="false" />
-                <element signature="e#16106#16107#0" expanded="false" />
-                <element signature="e#16338#16339#0" expanded="false" />
-                <element signature="e#16409#16410#0" expanded="false" />
-                <element signature="e#16580#16581#0" expanded="false" />
-                <element signature="e#16614#16615#0" expanded="false" />
-                <element signature="e#16788#16789#0" expanded="false" />
-                <element signature="e#16823#16824#0" expanded="false" />
-                <element signature="e#18184#18185#0" expanded="false" />
-                <element signature="e#18219#18220#0" expanded="false" />
-                <element signature="e#18436#18437#0" expanded="false" />
-                <element signature="e#18480#18481#0" expanded="false" />
-                <element signature="e#18635#18636#0" expanded="false" />
-                <element signature="e#18685#18686#0" expanded="false" />
-                <element signature="e#18924#18925#0" expanded="false" />
-                <element signature="e#18992#18993#0" expanded="false" />
-                <element signature="e#19172#19173#0" expanded="false" />
-                <element signature="e#19206#19207#0" expanded="false" />
-                <element signature="e#19399#19400#0" expanded="false" />
-                <element signature="e#19434#19435#0" expanded="false" />
-                <element signature="e#19559#19560#0" expanded="false" />
-                <element signature="e#19597#19598#0" expanded="false" />
-                <element signature="e#23426#23427#0" expanded="false" />
-                <element signature="e#23456#23457#0" expanded="false" />
-                <element signature="e#23575#23576#0" expanded="false" />
-                <element signature="e#23607#23608#0" expanded="false" />
-                <element signature="e#26969#26970#0" expanded="false" />
-                <element signature="e#27008#27009#0" expanded="false" />
-                <element signature="e#27173#27174#0" expanded="false" />
-                <element signature="e#27210#27211#0" expanded="false" />
-                <element signature="e#44792#44793#0" expanded="false" />
-                <element signature="e#44834#44835#0" expanded="false" />
-                <element signature="e#45875#45876#0" expanded="false" />
-                <element signature="e#45924#45925#0" expanded="false" />
-                <element signature="e#46687#46688#0" expanded="false" />
-                <element signature="e#46723#46724#0" expanded="false" />
-                <element signature="e#47380#47381#0" expanded="false" />
-                <element signature="e#47411#47412#0" expanded="false" />
-                <element signature="e#47609#47610#0" expanded="false" />
-                <element signature="e#47643#47644#0" expanded="false" />
-                <element signature="e#48126#48127#0" expanded="false" />
-                <element signature="e#48164#48165#0" expanded="false" />
-                <element signature="e#48306#48307#0" expanded="false" />
-                <element signature="e#48343#48344#0" expanded="false" />
-                <element signature="e#48730#48731#0" expanded="false" />
-                <element signature="e#48766#48767#0" expanded="false" />
-                <element signature="e#48943#48944#0" expanded="false" />
-                <element signature="e#48979#48980#0" expanded="false" />
-                <element signature="e#49579#49580#0" expanded="false" />
-                <element signature="e#49621#49622#0" expanded="false" />
-                <element signature="e#49881#49882#0" expanded="false" />
-                <element signature="e#49926#49927#0" expanded="false" />
-                <element signature="e#50036#50037#0" expanded="false" />
-                <element signature="e#50071#50072#0" expanded="false" />
-                <element signature="e#50320#50321#0" expanded="false" />
-                <element signature="e#50354#50355#0" expanded="false" />
-                <element signature="e#50568#50569#0" expanded="false" />
-                <element signature="e#50603#50604#0" expanded="false" />
-                <element signature="e#50863#50864#0" expanded="false" />
-                <element signature="e#50905#50906#0" expanded="false" />
-                <element signature="e#57216#57217#0" expanded="false" />
-                <element signature="e#57255#57256#0" expanded="false" />
-                <element signature="e#57442#57443#0" expanded="false" />
-                <element signature="e#57477#57478#0" expanded="false" />
-                <element signature="e#62176#62177#0" expanded="false" />
-                <element signature="e#62208#62209#0" expanded="false" />
-                <element signature="e#62924#62925#0" expanded="false" />
-                <element signature="e#62956#62957#0" expanded="false" />
-                <element signature="e#63230#63231#0" expanded="false" />
-                <element signature="e#63265#63266#0" expanded="false" />
-                <element signature="e#66810#66811#0" expanded="false" />
-                <element signature="e#66883#66884#0" expanded="false" />
-                <element signature="e#67109#67110#0" expanded="false" />
-                <element signature="e#67170#67171#0" expanded="false" />
-                <element signature="e#67791#67792#0" expanded="false" />
-                <element signature="e#67869#67870#0" expanded="false" />
-                <element signature="e#68155#68156#0" expanded="false" />
-                <element signature="e#68233#68234#0" expanded="false" />
-                <element signature="e#68505#68506#0" expanded="false" />
-                <element signature="e#68556#68557#0" expanded="false" />
-                <element signature="e#68786#68787#0" expanded="false" />
-                <element signature="e#68827#68828#0" expanded="false" />
-                <element signature="e#69103#69104#0" expanded="false" />
-                <element signature="e#69158#69159#0" expanded="false" />
-                <element signature="e#69417#69418#0" expanded="false" />
-                <element signature="e#69490#69491#0" expanded="false" />
-                <element signature="e#69776#69777#0" expanded="false" />
-                <element signature="e#69850#69851#0" expanded="false" />
-                <element signature="e#74439#74440#0" expanded="false" />
-                <element signature="e#74520#74521#0" expanded="false" />
-                <element signature="e#78000#78001#0" expanded="false" />
-                <element signature="e#78048#78049#0" expanded="false" />
-                <element signature="e#80164#80165#0" expanded="false" />
-                <element signature="e#80208#80209#0" expanded="false" />
-                <element signature="e#80283#80284#0" expanded="false" />
-                <element signature="e#80327#80328#0" expanded="false" />
-                <element signature="e#80391#80392#0" expanded="false" />
-                <element signature="e#80432#80433#0" expanded="false" />
-                <element signature="e#80504#80505#0" expanded="false" />
-                <element signature="e#80545#80546#0" expanded="false" />
-                <element signature="e#81217#81218#0" expanded="false" />
-                <element signature="e#81259#81260#0" expanded="false" />
-                <element signature="e#81305#81306#0" expanded="false" />
-                <element signature="e#81344#81345#0" expanded="false" />
-                <element signature="e#81490#81491#0" expanded="false" />
-                <element signature="e#81530#81531#0" expanded="false" />
-                <element signature="e#81570#81571#0" expanded="false" />
-                <element signature="e#81630#81631#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebAppContext.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-webapp/8.1.9.v20130131/jetty-webapp-8.1.9.v20130131-sources.jar!/org/eclipse/jetty/webapp/WebAppContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6267" max-vertical-offset="18105">
-              <caret line="502" column="0" selection-start-line="502" selection-start-column="0" selection-end-line="502" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#48976#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#11743#11744#0" expanded="false" />
-                <element signature="e#11787#11788#0" expanded="false" />
-                <element signature="e#12662#12663#0" expanded="false" />
-                <element signature="e#12700#12701#0" expanded="false" />
-                <element signature="e#15625#15626#0" expanded="false" />
-                <element signature="e#15672#15673#0" expanded="false" />
-                <element signature="e#16223#16224#0" expanded="false" />
-                <element signature="e#16276#16277#0" expanded="false" />
-                <element signature="e#21858#21859#0" expanded="false" />
-                <element signature="e#21902#21903#0" expanded="false" />
-                <element signature="e#22086#22087#0" expanded="false" />
-                <element signature="e#22124#22125#0" expanded="false" />
-                <element signature="e#22429#22430#0" expanded="false" />
-                <element signature="e#22471#22472#0" expanded="false" />
-                <element signature="e#23285#23286#0" expanded="false" />
-                <element signature="e#23358#23359#0" expanded="false" />
-                <element signature="e#23541#23542#0" expanded="false" />
-                <element signature="e#23576#23577#0" expanded="false" />
-                <element signature="e#27609#27610#0" expanded="false" />
-                <element signature="e#27646#27647#0" expanded="false" />
-                <element signature="e#27813#27814#0" expanded="false" />
-                <element signature="e#27847#27848#0" expanded="false" />
-                <element signature="e#28065#28066#0" expanded="false" />
-                <element signature="e#28096#28097#0" expanded="false" />
-                <element signature="e#28344#28345#0" expanded="false" />
-                <element signature="e#28378#28379#0" expanded="false" />
-                <element signature="e#28770#28771#0" expanded="false" />
-                <element signature="e#28814#28815#0" expanded="false" />
-                <element signature="e#28947#28948#0" expanded="false" />
-                <element signature="e#28995#28996#0" expanded="false" />
-                <element signature="e#29120#29121#0" expanded="false" />
-                <element signature="e#29161#29162#0" expanded="false" />
-                <element signature="e#29286#29287#0" expanded="false" />
-                <element signature="e#29327#29328#0" expanded="false" />
-                <element signature="e#30186#30187#0" expanded="false" />
-                <element signature="e#30252#30253#0" expanded="false" />
-                <element signature="e#31579#31580#0" expanded="false" />
-                <element signature="e#31635#31636#0" expanded="false" />
-                <element signature="e#32985#32986#0" expanded="false" />
-                <element signature="e#33045#33046#0" expanded="false" />
-                <element signature="e#33273#33274#0" expanded="false" />
-                <element signature="e#33307#33308#0" expanded="false" />
-                <element signature="e#33560#33561#0" expanded="false" />
-                <element signature="e#33598#33599#0" expanded="false" />
-                <element signature="e#33802#33803#0" expanded="false" />
-                <element signature="e#33853#33854#0" expanded="false" />
-                <element signature="e#35342#35343#0" expanded="false" />
-                <element signature="e#35382#35383#0" expanded="false" />
-                <element signature="e#35603#35604#0" expanded="false" />
-                <element signature="e#35634#35635#0" expanded="false" />
-                <element signature="e#35908#35909#0" expanded="false" />
-                <element signature="e#35948#35949#0" expanded="false" />
-                <element signature="e#36162#36163#0" expanded="false" />
-                <element signature="e#36216#36217#0" expanded="false" />
-                <element signature="e#36425#36426#0" expanded="false" />
-                <element signature="e#36467#36468#0" expanded="false" />
-                <element signature="e#36970#36971#0" expanded="false" />
-                <element signature="e#37022#37023#0" expanded="false" />
-                <element signature="e#37872#37873#0" expanded="false" />
-                <element signature="e#37940#37941#0" expanded="false" />
-                <element signature="e#38774#38775#0" expanded="false" />
-                <element signature="e#38842#38843#0" expanded="false" />
-                <element signature="e#40006#40007#0" expanded="false" />
-                <element signature="e#40036#40037#0" expanded="false" />
-                <element signature="e#40220#40221#0" expanded="false" />
-                <element signature="e#40246#40247#0" expanded="false" />
-                <element signature="e#40533#40534#0" expanded="false" />
-                <element signature="e#40571#40572#0" expanded="false" />
-                <element signature="e#40891#40892#0" expanded="false" />
-                <element signature="e#40937#40938#0" expanded="false" />
-                <element signature="e#41052#41053#0" expanded="false" />
-                <element signature="e#41089#41090#0" expanded="false" />
-                <element signature="e#41383#41384#0" expanded="false" />
-                <element signature="e#41431#41432#0" expanded="false" />
-                <element signature="e#42258#42259#0" expanded="false" />
-                <element signature="e#42309#42310#0" expanded="false" />
-                <element signature="e#42920#42921#0" expanded="false" />
-                <element signature="e#42978#42979#0" expanded="false" />
-                <element signature="e#48939#48940#0" expanded="false" />
-                <element signature="e#48971#48972#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -398,7 +112,27 @@
         <entry file="file://$PROJECT_DIR$/config/dev/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-              <caret line="0" column="20" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="20" />
+              <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fiora.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/deploy/fiora.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+              <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="beans.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/dev/beans.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="585">
+              <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -407,11 +141,9 @@
       <file leaf-file-name="MM131Fetcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/mm131/MM131Fetcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="3210">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="19.88889" vertical-offset="687" max-vertical-offset="3210">
+              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -424,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/ErrorResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DzAddResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DZAddRecentCommentResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/DZAddTopCommentResponse.java" />
@@ -432,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/api/jax/CommentAddMachineResp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/exception/CanBeIgnoreException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/ErrorCode.java" />
-        <option value="$PROJECT_DIR$/config/deploy/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/exception/ErrorResponseException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/JaxManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/service/FetchService.java" />
@@ -459,21 +189,23 @@
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/service/JaxService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/ResponseParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/JaxService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/util/InternetUtil.java" />
         <option value="$PROJECT_DIR$/bin/server-daemon.sh" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/dz/NHDZFetcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/mm131/MM131Fetcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/AlbumRemoteService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/HDConstants.java" />
-        <option value="$PROJECT_DIR$/config/deploy/fiora.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FetchTask.java" />
-        <option value="$PROJECT_DIR$/config/dev/fiora.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraListener.java" />
         <option value="$PROJECT_DIR$/config/dev/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/DZ.java" />
+        <option value="$PROJECT_DIR$/config/deploy/log4j.properties" />
+        <option value="$PROJECT_DIR$/config/deploy/poppy.properties" />
+        <option value="$PROJECT_DIR$/config/deploy/fiora.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FetchTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/DZRemoteService.java" />
+        <option value="$PROJECT_DIR$/config/dev/fiora.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/util/InternetUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/NHDZFetcher.java" />
       </list>
     </option>
@@ -570,8 +302,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -697,164 +429,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fetcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fetcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nhdz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fetcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mm131" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fiora" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1322,6 +896,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -1340,22 +930,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
       <method />
     </configuration>
     <configuration default="false" name="jetty-run" type="MavenRunConfiguration" factoryName="Maven">
@@ -1505,11 +1079,12 @@
       <workItem from="1509700463075" duration="2555000" />
       <workItem from="1509786476100" duration="7268000" />
       <workItem from="1509971226345" duration="120000" />
+      <workItem from="1510046484162" duration="6187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209325000" />
+    <option name="totallyTimeSpent" value="215512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="724" extended-state="6" />
@@ -1523,37 +1098,37 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39438945" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5012225" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22051696" sideWeight="0.4987775" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22051696" sideWeight="0.4987775" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12706271" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25247526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20689656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39438945" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1572,8 +1147,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1595,7 +1170,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="121" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/NHDZFetcher.java</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="123" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1636,13 +1219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4701087" vertical-offset="112" max-vertical-offset="585">
           <caret line="19" column="38" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy/dataSource.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.393586" vertical-offset="30" max-vertical-offset="600">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1737,13 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/util/InternetUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7002725" vertical-offset="448" max-vertical-offset="2655">
-          <caret line="70" column="79" selection-start-line="70" selection-start-column="79" selection-end-line="70" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/java/net/URL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5950" max-vertical-offset="18900">
@@ -1755,13 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5260" max-vertical-offset="8505">
           <caret line="387" column="18" selection-start-line="387" selection-start-column="18" selection-end-line="387" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4755245" vertical-offset="14" max-vertical-offset="300">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1786,13 +1348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy/poppy.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12975779" vertical-offset="0" max-vertical-offset="578">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/dev/dataSource.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6283186" vertical-offset="35" max-vertical-offset="600">
@@ -1805,20 +1360,6 @@
         <state vertical-scroll-proportion="0.83564013" vertical-offset="1617" max-vertical-offset="3450">
           <caret line="140" column="29" selection-start-line="140" selection-start-column="29" selection-end-line="140" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/Fetcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15570934" vertical-offset="0" max-vertical-offset="578">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/dev/beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.52" vertical-offset="17" max-vertical-offset="585">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1837,16 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/mm131/MM131Fetcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3210">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21176471" vertical-offset="0" max-vertical-offset="425">
@@ -1855,40 +1386,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FetchTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5132743" vertical-offset="156" max-vertical-offset="495">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy/fiora.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17699115" vertical-offset="0" max-vertical-offset="339">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/dev/fiora.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.044247787" vertical-offset="0" max-vertical-offset="339">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/HDConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17699115" vertical-offset="0" max-vertical-offset="339">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/AlbumRemoteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44247788" vertical-offset="0" max-vertical-offset="2490">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -2030,9 +1531,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/ResponseParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49307957" vertical-offset="0" max-vertical-offset="585">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#685#686#0" expanded="false" />
+            <element signature="e#717#718#0" expanded="false" />
+            <element signature="e#779#780#0" expanded="false" />
+            <element signature="e#806#807#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#875#876#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-webapp/8.1.9.v20130131/jetty-webapp-8.1.9.v20130131-sources.jar!/org/eclipse/jetty/webapp/WebAppContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6267" max-vertical-offset="18105">
+        <state vertical-scroll-proportion="0.19115044" vertical-offset="6267" max-vertical-offset="18105">
           <caret line="502" column="0" selection-start-line="502" selection-start-column="0" selection-end-line="502" selection-end-column="0" />
           <folding>
             <element signature="e#0#48976#0" expanded="false" />
@@ -2123,7 +1640,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlet/8.1.9.v20130131/jetty-servlet-8.1.9.v20130131-sources.jar!/org/eclipse/jetty/servlet/ServletContextHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5127" max-vertical-offset="17055">
+        <state vertical-scroll-proportion="0.19115044" vertical-offset="5127" max-vertical-offset="17055">
           <caret line="428" column="0" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
           <folding>
             <element signature="e#0#44673#0" expanded="false" />
@@ -2204,27 +1721,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/dev/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="339">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="630">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/config/PropertiesConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="735">
+        <state vertical-scroll-proportion="0.2733564" vertical-offset="157" max-vertical-offset="735">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -2236,49 +1735,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/DZ.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FioraListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37758112" vertical-offset="7" max-vertical-offset="690">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.42041522" vertical-offset="42" max-vertical-offset="630">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/ResponseParser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/AlbumRemoteService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49307957" vertical-offset="0" max-vertical-offset="585">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#685#686#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#806#807#0" expanded="false" />
-            <element signature="e#843#844#0" expanded="false" />
-            <element signature="e#875#876#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-0.1816609" vertical-offset="255" max-vertical-offset="2490">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/NHDZFetcher.java">
+    <entry file="file://$PROJECT_DIR$/config/deploy/dataSource.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20176992" vertical-offset="1416" max-vertical-offset="2235">
-          <caret line="124" column="83" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-10.2" vertical-offset="30" max-vertical-offset="600">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy/poppy.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/mm131/MM131Fetcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="19.88889" vertical-offset="687" max-vertical-offset="3210">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/jax/DZRemoteService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45663717" vertical-offset="87" max-vertical-offset="855">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.63190186" vertical-offset="394" max-vertical-offset="855">
+          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy/fiora.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/dev/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="585">
+          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/dev/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/dev/fiora.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/core/FetchTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/Fetcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/DZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="690">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/util/InternetUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2700">
+          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/j13/fiora/fetcher/nhdz/NHDZFetcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.039045554" vertical-offset="1302" max-vertical-offset="2745">
+          <caret line="88" column="35" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

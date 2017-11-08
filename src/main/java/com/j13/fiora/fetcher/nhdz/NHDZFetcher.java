@@ -39,6 +39,15 @@ public class NHDZFetcher implements Fetcher {
     @Override
     public void fetch() throws FioraException {
         Iterator<String> idIter = getAndParseDZId();
+        if (idIter == null) {
+            LOG.info("idIter size is 0. sleep and continue");
+            try {
+                Thread.sleep(10000L);
+            } catch (InterruptedException e) {
+                LOG.error("", e);
+            }
+            return;
+        }
         List<DZ> dzList = parsePerDZ(idIter);
         save(dzList);
     }
@@ -100,6 +109,7 @@ public class NHDZFetcher implements Fetcher {
                 dz.setTopcommentList(topCommentList);
                 LOG.info("dz topComment size = {}, add.", topCommentList.size());
             } else {
+                LOG.info("dz topComment size={}, continue", topCommentList.size());
                 continue;
             }
 
@@ -113,6 +123,8 @@ public class NHDZFetcher implements Fetcher {
         String rawResponse = InternetUtil.get("http://www.neihanshequ.com");
         int idx = rawResponse.indexOf("var gGroupIdList = ");
         String tmp1 = rawResponse.substring(idx + 21, rawResponse.length());
+        if (tmp1.indexOf("1];") == 0)
+            return null;
         LOG.info("c : " + tmp1.substring(0, 200));
         int idx2 = tmp1.indexOf("',-1];");
         String tmp2 = tmp1.substring(0, idx2);
@@ -127,7 +139,7 @@ public class NHDZFetcher implements Fetcher {
             LOG.info("random user. userId = {}", randomUserId);
             int dzId = 0;
             try {
-                dzId = dzRemoteService.addDZ(randomUserId, dz.getContent(), dz.getSourceDzId(), SOURCE_ID);
+                dzId = dzRemoteService.addDZ(randomUserId, dz.getContent(), SOURCE_ID, dz.getSourceDzId());
                 LOG.info("dz added. dzId={}", dzId);
             } catch (ErrorResponseException e) {
                 continue;

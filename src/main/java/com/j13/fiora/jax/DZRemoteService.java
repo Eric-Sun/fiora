@@ -42,7 +42,7 @@ public class DZRemoteService {
     }
 
 
-    public int addDZ(int userId, String content, String sourceId, int sourceDZId) throws FioraException, ErrorResponseException {
+    public int addDZ(int userId, String content, int sourceId, String sourceDZId) throws FioraException, ErrorResponseException {
         Map<String, Object> params = Maps.newHashMap();
         params.put("sourceId", sourceId);
         params.put("sourceDZId", sourceDZId);
